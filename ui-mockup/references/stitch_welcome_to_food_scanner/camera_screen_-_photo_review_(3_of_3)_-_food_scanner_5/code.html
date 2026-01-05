@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filter Scans - Food Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e", 
+                        "warning": "#fbbf24", // Amber-400 for Uncertain
+                        "caution": "#fb923c", // Orange-400 for Caution
+                        "danger": "#ff453a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#111111", 
+                        "surface-dark": "#1c1c1e",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(844px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-current {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-black">
+<div class="px-6 pt-14 pb-6 bg-background-dark border-b border-white/5 z-30">
+<h1 class="text-3xl font-extrabold text-white tracking-tight">Filter Scans</h1>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar px-6 pt-8 pb-32">
+<div class="mb-10">
+<h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4 pl-1">Verdict</h2>
+<div class="space-y-3">
+<label class="group flex items-center justify-between p-4 bg-surface-dark rounded-2xl border border-white/5 cursor-pointer active:scale-[0.98] transition-all hover:bg-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined fill-current text-xl">check_circle</span>
+</div>
+<span class="font-bold text-white text-lg">Safe</span>
+</div>
+<input checked="" class="size-6 rounded-md border-2 border-white/20 bg-transparent text-primary focus:ring-0 focus:ring-offset-0 checked:bg-primary checked:border-primary transition-all cursor-pointer" type="checkbox"/>
+</label>
+<label class="group flex items-center justify-between p-4 bg-surface-dark rounded-2xl border border-white/5 cursor-pointer active:scale-[0.98] transition-all hover:bg-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-danger/10 flex items-center justify-center text-danger border border-danger/20">
+<span class="material-symbols-outlined fill-current text-xl">cancel</span>
+</div>
+<span class="font-bold text-white text-lg">Unsafe</span>
+</div>
+<input checked="" class="size-6 rounded-md border-2 border-white/20 bg-transparent text-danger focus:ring-0 focus:ring-offset-0 checked:bg-danger checked:border-danger transition-all cursor-pointer" type="checkbox"/>
+</label>
+<label class="group flex items-center justify-between p-4 bg-surface-dark rounded-2xl border border-white/5 cursor-pointer active:scale-[0.98] transition-all hover:bg-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-caution/10 flex items-center justify-center text-caution border border-caution/20">
+<span class="material-symbols-outlined fill-current text-xl">error</span>
+</div>
+<span class="font-bold text-white text-lg">Caution</span>
+</div>
+<input class="size-6 rounded-md border-2 border-white/20 bg-transparent text-caution focus:ring-0 focus:ring-offset-0 checked:bg-caution checked:border-caution transition-all cursor-pointer" type="checkbox"/>
+</label>
+<label class="group flex items-center justify-between p-4 bg-surface-dark rounded-2xl border border-white/5 cursor-pointer active:scale-[0.98] transition-all hover:bg-white/5">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-warning/10 flex items-center justify-center text-warning border border-warning/20">
+<span class="material-symbols-outlined fill-current text-xl">help</span>
+</div>
+<span class="font-bold text-white text-lg">Uncertain</span>
+</div>
+<input class="size-6 rounded-md border-2 border-white/20 bg-transparent text-warning focus:ring-0 focus:ring-offset-0 checked:bg-warning checked:border-warning transition-all cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="mb-4">
+<h2 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4 pl-1">Date Range</h2>
+<div class="relative">
+<button class="w-full flex items-center justify-between p-4 bg-surface-dark rounded-2xl border border-white/5 active:scale-[0.99] transition-all hover:bg-white/5 group ring-1 ring-white/0 hover:ring-white/10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-white/5 flex items-center justify-center text-white border border-white/10">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+</div>
+<span class="font-bold text-white text-lg">Today</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-white transition-colors text-3xl">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 w-full bg-background-dark/80 backdrop-blur-xl border-t border-white/5 p-6 z-40 pb-10">
+<div class="flex gap-4">
+<button class="flex-1 py-4 rounded-2xl font-bold text-white bg-surface-dark hover:bg-white/10 active:scale-95 transition-all border border-white/10 text-lg">
+                    Cancel
+                </button>
+<button class="flex-1 py-4 rounded-2xl font-bold text-background-dark bg-primary hover:brightness-110 active:scale-95 transition-all shadow-[0_4px_20px_rgba(48,232,110,0.3)] text-lg">
+                    Apply
+                </button>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Email &amp; Password Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "text-main": "#111813",
+                        "text-sub": "#63886f",
+                        "border-color": "#dce5df",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile view */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-text-main">
+<div class="relative flex h-screen w-full max-w-md mx-auto flex-col overflow-hidden bg-white dark:bg-[#1a2c20] shadow-xl sm:rounded-xl my-0 sm:my-8 sm:h-[800px]">
+<!-- Top App Bar -->
+<div class="flex items-center px-4 py-3 justify-between bg-white dark:bg-[#1a2c20] sticky top-0 z-10">
+<button class="text-text-main dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Email &amp; Password</h2>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar p-5 space-y-6">
+<!-- Intro / Headline (Optional Context) -->
+<div class="pb-2">
+<h3 class="text-text-main dark:text-white tracking-tight text-2xl font-bold leading-tight">Account Security</h3>
+<p class="text-text-sub dark:text-gray-400 text-sm mt-1">Update your email and secure your account.</p>
+</div>
+<!-- Email Section -->
+<div class="space-y-4">
+<label class="flex flex-col w-full">
+<p class="text-text-main dark:text-gray-200 text-sm font-semibold leading-normal pb-2">Email Address</p>
+<div class="group flex w-full items-center rounded-xl border border-border-color dark:border-gray-700 bg-background-light dark:bg-[#25352b] px-3.5 h-14 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-text-sub dark:text-gray-500 mr-3" style="font-size: 20px;">mail</span>
+<input class="flex-1 bg-transparent border-none p-0 text-text-main dark:text-white placeholder:text-text-sub/70 focus:ring-0 text-base font-medium" readonly="" type="email" value="jessica.doe@example.com"/>
+<button class="text-primary hover:text-primary/80 font-semibold text-sm px-2 py-1 rounded transition-colors">
+                            Edit
+                        </button>
+</div>
+</label>
+</div>
+<!-- Divider -->
+<div class="h-px w-full bg-border-color dark:bg-gray-700"></div>
+<!-- Password Section -->
+<div class="space-y-5">
+<!-- Current Password -->
+<label class="flex flex-col w-full">
+<p class="text-text-main dark:text-gray-200 text-sm font-semibold leading-normal pb-2">Current Password</p>
+<div class="group flex w-full items-center rounded-xl border border-border-color dark:border-gray-700 bg-white dark:bg-[#1a2c20] px-3.5 h-14 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-text-sub dark:text-gray-500 mr-3" style="font-size: 20px;">lock</span>
+<input class="flex-1 bg-transparent border-none p-0 text-text-main dark:text-white placeholder:text-text-sub/50 focus:ring-0 text-base font-normal" placeholder="Enter current password" type="password"/>
+<button class="text-text-sub dark:text-gray-500 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full">
+<span class="material-symbols-outlined" style="font-size: 20px;">visibility_off</span>
+</button>
+</div>
+</label>
+<!-- New Password -->
+<label class="flex flex-col w-full">
+<div class="flex justify-between items-end pb-2">
+<p class="text-text-main dark:text-gray-200 text-sm font-semibold leading-normal">New Password</p>
+</div>
+<div class="group flex w-full items-center rounded-xl border border-border-color dark:border-gray-700 bg-white dark:bg-[#1a2c20] px-3.5 h-14 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-text-sub dark:text-gray-500 mr-3" style="font-size: 20px;">key</span>
+<input class="flex-1 bg-transparent border-none p-0 text-text-main dark:text-white placeholder:text-text-sub/50 focus:ring-0 text-base font-normal" placeholder="At least 8 characters" type="password"/>
+<button class="text-text-sub dark:text-gray-500 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full">
+<span class="material-symbols-outlined" style="font-size: 20px;">visibility_off</span>
+</button>
+</div>
+<p class="text-xs text-text-sub mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                        Must contain at least 8 characters
+                    </p>
+</label>
+<!-- Confirm Password -->
+<label class="flex flex-col w-full">
+<p class="text-text-main dark:text-gray-200 text-sm font-semibold leading-normal pb-2">Confirm New Password</p>
+<div class="group flex w-full items-center rounded-xl border border-border-color dark:border-gray-700 bg-white dark:bg-[#1a2c20] px-3.5 h-14 focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+<span class="material-symbols-outlined text-text-sub dark:text-gray-500 mr-3" style="font-size: 20px;">check_circle</span>
+<input class="flex-1 bg-transparent border-none p-0 text-text-main dark:text-white placeholder:text-text-sub/50 focus:ring-0 text-base font-normal" placeholder="Re-enter new password" type="password"/>
+<button class="text-text-sub dark:text-gray-500 hover:text-primary transition-colors flex items-center justify-center p-1 rounded-full">
+<span class="material-symbols-outlined" style="font-size: 20px;">visibility_off</span>
+</button>
+</div>
+</label>
+</div>
+<div class="h-10"></div> <!-- Spacer for scrolling -->
+</div>
+<!-- Sticky Bottom Action -->
+<div class="p-4 bg-white dark:bg-[#1a2c20] border-t border-border-color dark:border-gray-700">
+<button class="w-full h-12 bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 font-bold text-base rounded-xl cursor-not-allowed transition-all hover:shadow-sm flex items-center justify-center gap-2" disabled="">
+<span>Save Changes</span>
+</button>
+<!-- Active State Example (Commented out for initial disabled state as requested) -->
+<!-- <button class="w-full h-12 bg-primary text-[#112116] font-bold text-base rounded-xl shadow-md hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+                <span>Save Changes</span>
+            </button> -->
+</div>
+</div>
+</body></html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Scanner - Preferences Saved</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#30e86e",
+                "background-light": "#f6f8f6",
+                "background-dark": "#112116",
+                },
+                fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111813] dark:text-white overflow-x-hidden antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-[#112116] shadow-2xl overflow-hidden p-6">
+<div class="flex-1 flex flex-col items-center justify-center text-center">
+<div class="relative mb-10 group">
+<div class="absolute -inset-6 bg-primary/20 rounded-full blur-2xl opacity-50 animate-pulse"></div>
+<div class="relative flex items-center justify-center size-32 rounded-full bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/20 border border-green-200 dark:border-green-800/50 shadow-sm transition-transform duration-700 hover:scale-105">
+<span class="material-symbols-outlined text-[64px] text-primary filled drop-shadow-sm">check_circle</span>
+</div>
+<div class="absolute -top-1 -right-1 size-3 bg-primary rounded-full opacity-80 animate-bounce delay-75"></div>
+<div class="absolute top-1/2 -left-4 size-2 bg-green-400 rounded-full opacity-60"></div>
+<div class="absolute -bottom-2 left-8 size-2.5 bg-green-300 dark:bg-green-700 rounded-full opacity-50 animate-pulse"></div>
+</div>
+<h1 class="text-3xl font-extrabold text-[#111813] dark:text-white mb-4 tracking-tight">Preferences Saved!</h1>
+<p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-[300px]">
+            Your dietary preferences have been successfully updated. Your scan results will now reflect your new choices.
+        </p>
+</div>
+<div class="w-full pb-8 pt-4">
+<button class="w-full flex items-center justify-center gap-2 bg-[#111813] dark:bg-primary text-white dark:text-[#112116] font-bold text-lg py-4 rounded-xl shadow-xl shadow-gray-200 dark:shadow-none hover:opacity-90 active:scale-[0.98] transition-all">
+            Done
+        </button>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications Settings</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "primary-dark": "#25c25a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2e22",
+                        "subtle-light": "#f0f4f2",
+                        "subtle-dark": "#24382c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom Toggle Switch Styles */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #30e86e;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #30e86e;
+        }
+        /* Hide scrollbar for cleaner look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 overflow-x-hidden min-h-screen">
+<div class="relative flex flex-col mx-auto max-w-md min-h-screen pb-12">
+<!-- Header -->
+<header class="sticky top-0 z-20 flex items-center justify-between px-4 py-4 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md">
+<button aria-label="Go back" class="flex items-center justify-center w-10 h-10 -ml-2 rounded-full active:bg-slate-200 dark:active:bg-slate-800 transition-colors text-slate-900 dark:text-white group">
+<span class="material-symbols-outlined transition-transform group-active:-translate-x-1">arrow_back</span>
+</button>
+<h1 class="flex-1 text-xl font-bold text-center pr-8 text-slate-900 dark:text-white">Notifications</h1>
+</header>
+<!-- System Permission Banner (Conditional State) -->
+<div class="px-4 mt-2 mb-6">
+<div class="flex items-start gap-3 p-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-900/30 rounded-xl">
+<div class="p-1.5 bg-orange-100 dark:bg-orange-800/40 rounded-full shrink-0 text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-sm font-bold block">notifications_off</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-orange-900 dark:text-orange-200 leading-tight">System notifications disabled</h3>
+<p class="text-xs text-orange-800/80 dark:text-orange-300/80 mt-1 leading-normal">
+                        Enable notifications in your iOS Settings to receive real-time allergy alerts.
+                    </p>
+<button class="mt-2 text-xs font-bold text-orange-700 dark:text-orange-400 hover:text-orange-900 dark:hover:text-orange-200 underline">Open Settings</button>
+</div>
+</div>
+</div>
+<!-- Section: Essential Alerts -->
+<div class="px-4 mb-8">
+<h2 class="px-2 mb-2 text-xs font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400">Essential Alerts</h2>
+<div class="flex flex-col overflow-hidden bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800/50">
+<!-- Scan Results -->
+<div class="relative flex items-center justify-between p-4 gap-4 border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-start gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-subtle-light dark:bg-subtle-dark text-slate-700 dark:text-slate-200 shrink-0">
+<span class="material-symbols-outlined">barcode_scanner</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">Scan Results</p>
+<p class="mt-0.5 text-sm font-medium text-slate-500 dark:text-slate-400 leading-normal">Notify me when a scan is complete.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-7 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+<!-- Allergy Warnings -->
+<div class="relative flex items-center justify-between p-4 gap-4">
+<div class="flex items-start gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 shrink-0">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">Allergy Warnings</p>
+<p class="mt-0.5 text-sm font-medium text-slate-500 dark:text-slate-400 leading-normal">High priority alerts for detected allergens.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-7 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Section: Updates & Tips -->
+<div class="px-4 mb-8">
+<h2 class="px-2 mb-2 text-xs font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400">Updates &amp; Tips</h2>
+<div class="flex flex-col overflow-hidden bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800/50">
+<!-- Product Updates -->
+<div class="relative flex items-center justify-between p-4 gap-4 border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-subtle-light dark:bg-subtle-dark text-slate-700 dark:text-slate-200 shrink-0">
+<span class="material-symbols-outlined">update</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">Product Updates</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-7 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+<!-- Personalized Tips -->
+<div class="relative flex items-center justify-between p-4 gap-4 border-b border-slate-100 dark:border-slate-800/50">
+<div class="flex items-start gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-subtle-light dark:bg-subtle-dark text-slate-700 dark:text-slate-200 shrink-0">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">Personalized Tips</p>
+<p class="mt-0.5 text-sm font-medium text-slate-500 dark:text-slate-400 leading-normal">Daily advice based on your diet.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-7 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+<!-- App Announcements -->
+<div class="relative flex items-center justify-between p-4 gap-4">
+<div class="flex items-start gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-subtle-light dark:bg-subtle-dark text-slate-700 dark:text-slate-200 shrink-0">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div class="flex flex-col">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">App Announcements</p>
+<p class="mt-0.5 text-sm font-medium text-slate-500 dark:text-slate-400 leading-normal">News from the team.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-7 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary shadow-inner"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Section: Preferences -->
+<div class="px-4 mb-8">
+<h2 class="px-2 mb-2 text-xs font-bold tracking-wider uppercase text-slate-500 dark:text-slate-400">Preferences</h2>
+<div class="flex flex-col overflow-hidden bg-surface-light dark:bg-surface-dark rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800/50">
+<!-- Notification Sounds -->
+<button class="w-full relative flex items-center justify-between p-4 gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-subtle-light dark:bg-subtle-dark text-slate-700 dark:text-slate-200 shrink-0">
+<span class="material-symbols-outlined">music_note</span>
+</div>
+<div class="flex flex-col items-start">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">Notification Sounds</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Droplet</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-lg">chevron_right</span>
+</div>
+</button>
+<!-- Email Frequency -->
+<button class="w-full relative flex items-center justify-between p-4 gap-4 border-t border-slate-100 dark:border-slate-800/50 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-4 flex-1">
+<div class="flex items-center justify-center w-10 h-10 rounded-xl bg-subtle-light dark:bg-subtle-dark text-slate-700 dark:text-slate-200 shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="flex flex-col items-start">
+<p class="text-base font-bold text-slate-900 dark:text-white leading-tight">Email Digest</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">Weekly</span>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-lg">chevron_right</span>
+</div>
+</button>
+</div>
+</div>
+<div class="px-8 mt-4 mb-8 text-center">
+<p class="text-xs text-slate-400 dark:text-slate-500">
+                Notifications help you stay safe. We recommend keeping "Allergy Warnings" enabled at all times.
+            </p>
+</div>
+</div>
+</body></html>

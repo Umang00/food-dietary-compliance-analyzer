@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Recipe Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "primary-dark": "#20b555",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2c20",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0e1b12] dark:text-gray-100 antialiased overflow-x-hidden pb-24">
+<!-- Header -->
+<header class="sticky top-0 z-30 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm p-4 pb-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-[#0e1b12] dark:text-white" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-[#0e1b12] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-2">Community Recipes</h2>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors relative">
+<span class="material-symbols-outlined text-[#0e1b12] dark:text-white" style="font-size: 24px;">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border border-white dark:border-gray-900"></span>
+</button>
+</header>
+<!-- Search Section -->
+<div class="px-4 py-3 sticky top-[60px] z-20 bg-background-light dark:bg-background-dark">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-12 shadow-sm">
+<div class="flex items-center justify-center pl-4 bg-white dark:bg-surface-dark rounded-l-xl text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined" style="font-size: 24px;">search</span>
+</div>
+<input class="flex w-full flex-1 resize-none rounded-r-xl border-none bg-white dark:bg-surface-dark focus:ring-2 focus:ring-primary/50 placeholder:text-gray-400 px-4 pl-2 text-base font-medium leading-normal dark:text-white dark:placeholder:text-gray-500" placeholder="Search recipes, ingredients..." value=""/>
+<button class="px-4 bg-white dark:bg-surface-dark rounded-r-xl border-l border-gray-100 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">tune</span>
+</button>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto no-scrollbar">
+<!-- Active Chip -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-[#0e1b12] px-4 shadow-sm transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm" style="font-size: 18px;">local_fire_department</span>
+<span class="text-sm font-bold leading-normal">Trending</span>
+</button>
+<!-- Inactive Chips -->
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 px-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400" style="font-size: 18px;">eco</span>
+<span class="text-[#0e1b12] dark:text-gray-200 text-sm font-medium leading-normal">Vegan</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 px-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-orange-500" style="font-size: 18px;">spa</span>
+<span class="text-[#0e1b12] dark:text-gray-200 text-sm font-medium leading-normal">Jain</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 px-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-blue-500" style="font-size: 18px;">nightlight</span>
+<span class="text-[#0e1b12] dark:text-gray-200 text-sm font-medium leading-normal">Halal</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-700 px-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-amber-600" style="font-size: 18px;">grass</span>
+<span class="text-[#0e1b12] dark:text-gray-200 text-sm font-medium leading-normal">GF</span>
+</button>
+</div>
+<!-- Recipe Grid -->
+<div class="px-4 pb-4">
+<h3 class="text-lg font-bold mb-3 dark:text-white">Fresh from the Community</h3>
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative aspect-square w-full bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Avocado toast on a white plate with chili flakes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHj-lPXKMkd-t-LOJ4VRCHFTZImAHL8CcIj4YuL5ILRbxH2E7ZPQP0ehcA_Dv2Q_zDRK4qJU9_W1p7d2qjLs02H9xbbvyRKypzhc3jegWF5yPrqtowqd91hl4LOGIMK25iwnfscVGqYpNGqrGtzoiFtskcuTFEw3Df7Blmh_SFtqYWbjowJryU8DH7I1xKbeZ8N_4Q3bn2gM8PwOyahwkHzCwe1l3bVq2sAwIIYaDzeCLlSseXMJ7WxMI8DfQURBEIxNnmXAt0aJSj");'></div>
+<div class="absolute top-2 left-2">
+<div class="flex items-center gap-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-green-600 text-base leading-none">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wide text-green-800 dark:text-green-400">Vegan</span>
+</div>
+</div>
+<button class="absolute bottom-2 right-2 p-1.5 rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<h4 class="text-[#0e1b12] dark:text-white text-sm font-bold leading-tight line-clamp-2 mb-1">Spicy Smashed Avocado Toast</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mb-3">Quick breakfast with chili kick</p>
+<div class="mt-auto flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>10 min</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative aspect-square w-full bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Bowl of matar paneer curry with peas and cheese" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCn-mb1BWFZGIAK0PK32bRPFxU9Cqitmqxh3xCZneV5AeZWhpg2Bd3-hN40dTS7p72W91IVs7f0NC7-AcxTAtJAqpH4UdU-1Mqb4xAnapFIH1MPedZq3jF-nffRguZGLTKBizAQbxF4ipuPCAHiIYb7S_DBuvDWhpBKzm8H7dOpm6wpliqyJbyeTqB_DoYJQO6ZehsYFOONqtRfckukl5K2HJ3mtT4gTwA29gafxIwADi7nhe13JGwJjRjcGTSlZNfcCu1H6S8vlHFR");'></div>
+<div class="absolute top-2 left-2">
+<div class="flex items-center gap-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-base leading-none">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wide text-green-800 dark:text-primary">Jain</span>
+</div>
+</div>
+<button class="absolute bottom-2 right-2 p-1.5 rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[20px] fill-current text-red-500">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<h4 class="text-[#0e1b12] dark:text-white text-sm font-bold leading-tight line-clamp-2 mb-1">Homestyle Matar Paneer</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mb-3">No onion, no garlic recipe</p>
+<div class="mt-auto flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>35 min</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative aspect-square w-full bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Colorful quinoa salad bowl with vegetables" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIoSeGUuu7ivoHSwyeV4RMOg1CIu7TYkL__q25DxHB9LJSwu1fd1Pf-YyICvn1_3AbBJcql-AzXXAkV-xNlznrBFXeWi9MoH_LAaj1ovEhW73CJXy8eKXAZuUaQlPVIfu9nq_BgKs_FVwwcz3fPWcB_JhgiHSmQ6e30JfnSeT6o1CdVbTiDxhtDB8_7mUd5KEcJAyFJZBR5sLi0HtjYWBbLreMdD3xTrWTnOzfPxrReHs1HMkl9AOlbi0cSjCIgbRnqFrwBjuisy6D");'></div>
+<div class="absolute top-2 left-2">
+<div class="flex items-center gap-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-amber-600 text-base leading-none">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wide text-amber-800 dark:text-amber-400">GF</span>
+</div>
+</div>
+<button class="absolute bottom-2 right-2 p-1.5 rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<h4 class="text-[#0e1b12] dark:text-white text-sm font-bold leading-tight line-clamp-2 mb-1">Rainbow Quinoa Salad Bowl</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mb-3">Packed with protein &amp; fiber</p>
+<div class="mt-auto flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>15 min</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative aspect-square w-full bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Warm lentil soup in a rustic bowl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXEFI8L2gDIzhfbu1S6-v6NiY3N2SysQfNSaQvwD8c4sniCNyEIyXfu-kNasJJLTZi1xTys4bJ3mvR_w5cyO93wyT9VDz98t6Ax62FB9FirUnVIwe6XBKFD_w8faHxf7NzqXvi4LpaT50Me5IWJy_PWLA__hHMWYzhsVjbt6JtD9Bg8-YE_BNYNH5xhFp76hgkyH7dXnHSZWIfnCNij6c-pcpV57BIIWVRBFCaZIHDYtg0q-cUUPxePBxhlYy4R7Cm3iDt6ZFIj1pQ");'></div>
+<div class="absolute top-2 left-2">
+<div class="flex items-center gap-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-green-600 text-base leading-none">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wide text-green-800 dark:text-green-400">Vegan</span>
+</div>
+</div>
+<button class="absolute bottom-2 right-2 p-1.5 rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<h4 class="text-[#0e1b12] dark:text-white text-sm font-bold leading-tight line-clamp-2 mb-1">Golden Lentil Soup</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mb-3">Hearty winter comfort food</p>
+<div class="mt-auto flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>45 min</span>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative aspect-square w-full bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Acai smoothie bowl with granola and fruits" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDhAFc4Zp1rcngTXsFtaJoo9cbbujroEbuAwLTpNaUFzv8RHsb2_vl2-vPDR-amloiH4rABz_ZO5fpxszxtZRo05y3DLMPCwnS8by6t-OlWV_PrwV8yO5Fd9oGIgvGS7vqrroeFXEQioc_gu9A4uhqYLpASP8r4qDCIADWzurVWyCI9McNgGrRJjAdsdH2Nd5fd7jtOBs2iLIkuAX0Xx_UxhKMbWRfLVrrJdA9MP6ufmloXVdpPf83dnhwhof8qGEcZ9NmXYOsHbwx");'></div>
+<div class="absolute top-2 left-2">
+<div class="flex items-center gap-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-blue-500 text-base leading-none">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wide text-blue-800 dark:text-blue-400">Paleo</span>
+</div>
+</div>
+<button class="absolute bottom-2 right-2 p-1.5 rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<h4 class="text-[#0e1b12] dark:text-white text-sm font-bold leading-tight line-clamp-2 mb-1">Berry Power Bowl</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mb-3">Antioxidant rich breakfast</p>
+<div class="mt-auto flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>5 min</span>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group flex flex-col bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+<div class="relative aspect-square w-full bg-gray-200">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Vegetarian tacos with lime and cilantro" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWMamaWFnXa4ia0YQZkX9mP3UY7oFiPzU2wZYU4q1A-zD48YgBAs_rwcIhqbCzmqunZvQUnL4dhvVNCDicMNouiyZ-8ulr1TWMcYDqxb64Fo4_56RRK5XdXnd141GScx4ricE3Pm8-L-waKC7VQgMkx5x1rWxodp3RNyiiEx6KUwGgQkft05GLMcp4N1JPBkhc4D5sBLT9JiWbJy_23zHiCd09oPCjXBywsmCTDjFl5taTvPYKo3LQaD-qZVogHTuQ32ZJCUdHoatL");'></div>
+<div class="absolute top-2 left-2">
+<div class="flex items-center gap-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm">
+<span class="material-symbols-outlined text-purple-500 text-base leading-none">check_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wide text-purple-800 dark:text-purple-400">Vegetarian</span>
+</div>
+</div>
+<button class="absolute bottom-2 right-2 p-1.5 rounded-full bg-white/30 backdrop-blur-md text-white hover:bg-white/50 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+</div>
+<div class="p-3 flex flex-col flex-1">
+<h4 class="text-[#0e1b12] dark:text-white text-sm font-bold leading-tight line-clamp-2 mb-1">Street Style Veggie Tacos</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mb-3">Spicy salsa verde included</p>
+<div class="mt-auto flex items-center gap-2 text-xs font-medium text-gray-400 dark:text-gray-500">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>25 min</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<div class="fixed bottom-24 right-4 z-40">
+<button class="flex items-center justify-center h-14 bg-primary hover:bg-primary-dark text-[#0e1b12] rounded-2xl px-5 shadow-lg shadow-green-500/30 transition-all active:scale-95">
+<span class="material-symbols-outlined mr-2" style="font-size: 24px;">add</span>
+<span class="text-base font-bold tracking-wide">Share Recipe</span>
+</button>
+</div>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 px-6 py-2 z-50">
+<div class="flex justify-between items-center max-w-lg mx-auto">
+<button class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200">
+<span class="material-symbols-outlined text-[26px]">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200">
+<span class="material-symbols-outlined text-[26px]">barcode_scanner</span>
+<span class="text-[10px] font-medium">Scan</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-primary">
+<span class="material-symbols-outlined text-[26px] fill-current">restaurant_menu</span>
+<span class="text-[10px] font-bold">Recipes</span>
+</button>
+<button class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-200">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+<!-- Home Indicator for iPhone -->
+<div class="h-1 w-1/3 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto mt-2"></div>
+</div>
+</body></html>

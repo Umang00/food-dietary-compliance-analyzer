@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html class="" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Scanner - Forgot Password</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-dark": "#1c261f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased selection:bg-primary selection:text-background-dark">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden p-6 justify-center">
+<div class="flex flex-col items-center justify-center mb-10">
+<div class="w-16 h-16 bg-surface-dark border border-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/5">
+<span class="material-symbols-outlined text-primary text-4xl">qr_code_scanner</span>
+</div>
+<h1 class="text-gray-900 dark:text-white tracking-tight text-3xl font-bold leading-tight text-center">Forgot Password?</h1>
+<p class="text-gray-500 dark:text-gray-400 text-base font-medium leading-normal pt-3 text-center max-w-xs">Enter your email to receive a password reset link</p>
+</div>
+<form class="w-full max-w-md mx-auto space-y-6" onsubmit="event.preventDefault();">
+<div class="group">
+<label class="block text-gray-900 dark:text-white text-sm font-semibold mb-2 ml-1">Email Address</label>
+<div class="relative flex items-center">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">mail</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 text-base" placeholder="Enter your email" required="" type="email"/>
+</div>
+</div>
+<button class="w-full h-14 mt-4 bg-primary hover:bg-green-400 text-background-dark font-bold text-lg rounded-xl shadow-lg shadow-primary/20 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2">
+                Send Reset Link
+            </button>
+</form>
+<div class="mt-8 text-center">
+<a class="text-gray-500 dark:text-gray-400 font-semibold hover:text-gray-900 dark:hover:text-white transition-colors flex items-center justify-center gap-2 group" href="#">
+<span class="transition-transform group-hover:-translate-x-1">←</span> Back to Login
+        </a>
+</div>
+</div>
+</body></html>

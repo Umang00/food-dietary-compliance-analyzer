@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camera Screen - Photo Review (3 of 3)</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-[#000000]">
+<!-- Top App Bar (Overlaid on image or just at top) -->
+<div class="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 pt-12 bg-gradient-to-b from-black/60 to-transparent">
+<button class="flex items-center justify-center text-white size-10 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<button class="flex items-center justify-center text-white size-10 rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined text-2xl">check</span>
+</button>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col pt-0 pb-6">
+<!-- Photo Preview Area -->
+<div class="relative w-full flex-1 bg-neutral-900 flex items-center justify-center overflow-hidden">
+<!-- Main Image -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="Close up of a food nutrition label held in hand" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABwrG-nH4Pdl7-9XSIt_SmaXR6houPq8nj_FyzhuKpT3f3Cpi_J0cR5Pyc76RbH1-2Z4T10d1PhPR4qIfTa7JS5mZXOPZI-lZzJm8wPBQCzipGWzhTcZYfMLcK89yHIXFOeuHgOsdLct9XwwhGHu75gnZQ7XCW9OIc9Qx7I7sQbQ64MATntDgvDA6WObK1d7Grv1wTtDRBZ52YLIqDiCTjj3Vaep0iyUmkzo_3aKBipWsS9Kc-Ew-Onjc0E6TNySrh6AgfRFbrK2bR");'>
+</div>
+<!-- Overlay Gradient at bottom of image for text readability -->
+<div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#112116] to-transparent"></div>
+</div>
+<!-- Controls Section -->
+<div class="flex flex-col gap-5 px-6 pt-6 bg-background-dark">
+<!-- Status Indicators -->
+<div class="flex flex-col items-center gap-2">
+<!-- Pagination Dots -->
+<div class="flex gap-2 mb-1">
+<div class="w-2 h-2 rounded-full bg-primary/40"></div>
+<div class="w-2 h-2 rounded-full bg-primary/40"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<p class="text-white text-base font-semibold tracking-wide">Photo 3 of 3</p>
+<!-- Max Photos Warning -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+<span class="material-symbols-outlined text-amber-400 text-sm">info</span>
+<p class="text-gray-400 text-xs font-medium uppercase tracking-wider">Max 3 photos reached</p>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="w-full mt-2">
+<button class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 bg-primary text-background-dark shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all active:scale-[0.98]">
+<div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined mr-2 text-2xl font-bold">check_circle</span>
+<span class="text-lg font-bold tracking-tight">Start Scanning</span>
+</button>
+</div>
+<!-- Secondary Action -->
+<div class="w-full flex justify-center pb-4">
+<button class="flex items-center justify-center gap-2 text-gray-400 hover:text-white transition-colors py-2 px-4 rounded-lg">
+<span class="material-symbols-outlined text-xl">refresh</span>
+<span class="text-sm font-medium">Retake This Photo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Safe Area Spacer for iOS Home Indicator -->
+<div class="h-1 bg-background-dark"></div>
+</div>
+</body></html>

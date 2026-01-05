@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Scanner - Forgot Password Confirmation</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#34D399", // Fresh emerald green
+                        "primary-dark": "#059669",
+                        "accent": "#A7F3D0",
+                        "background-light": "#ffffff",
+                        "surface": "#F9FAFB",
+                        "text-main": "#111827",
+                        "text-sub": "#6B7280",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(52, 211, 153, 0.3)'
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: 100vh;padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display antialiased text-text-main h-full flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+<div class="flex-1 flex flex-col items-center justify-center p-8 w-full max-w-md mx-auto relative z-10">
+<div class="mb-10 relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl transform scale-110"></div>
+<div class="w-28 h-28 bg-surface border border-gray-100 rounded-full flex items-center justify-center relative shadow-soft">
+<span class="material-symbols-outlined text-primary text-[3.5rem] drop-shadow-sm">mark_email_read</span>
+</div>
+<div class="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full border-2 border-white"></div>
+<div class="absolute bottom-1 -left-1 w-4 h-4 bg-primary/40 rounded-full border-2 border-white"></div>
+</div>
+<div class="text-center space-y-4 mb-12">
+<h1 class="text-text-main tracking-tight text-3xl font-extrabold">Check Your Email</h1>
+<p class="text-text-sub text-base font-medium leading-relaxed max-w-[280px] mx-auto">
+                A password reset link has been sent to your email address. Please check your inbox and spam folder.
+            </p>
+</div>
+<div class="w-full space-y-6">
+<button class="w-full h-14 bg-text-main text-white hover:bg-black font-bold text-lg rounded-2xl shadow-xl transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 group">
+                Back to Login
+                <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="text-center bg-surface py-4 px-6 rounded-xl border border-gray-100">
+<p class="text-text-sub text-sm font-medium flex flex-col sm:flex-row items-center justify-center gap-1">
+<span>Didn't receive the email?</span>
+<button class="text-primary-dark font-bold hover:text-primary transition-colors focus:outline-none underline decoration-2 underline-offset-4 decoration-primary/30 hover:decoration-primary">
+                        Resend
+                    </button>
+</p>
+</div>
+</div>
+</div>
+<div class="w-full text-center pb-8 pt-4">
+<a class="text-gray-400 text-xs font-semibold hover:text-text-sub transition-colors inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+            Need help?
+        </a>
+</div>
+
+</body></html>

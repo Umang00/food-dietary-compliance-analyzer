@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Result: Uncertain Product - Food Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e", 
+                        "warning": "#fbbf24", // Amber-400 for Uncertain
+                        "warning-text": "#f59e0b", // Amber-500 for text
+                        "warning-surface": "#2b2208", // Dark amber tint for backgrounds
+                        "danger": "#ff453a",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#111111", 
+                        "surface-dark": "#1c1c1e",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(844px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-black">
+<div class="absolute top-0 left-0 right-0 z-30 flex items-center justify-between p-4 pt-12">
+<button class="flex items-center justify-center text-white size-10 rounded-full bg-black/40 backdrop-blur-md hover:bg-black/50 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col overflow-y-auto no-scrollbar relative z-10 pb-8">
+<div class="relative w-full h-80 shrink-0">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABwrG-nH4Pdl7-9XSIt_SmaXR6houPq8nj_FyzhuKpT3f3Cpi_J0cR5Pyc76RbH1-2Z4T10d1PhPR4qIfTa7JS5mZXOPZI-lZzJm8wPBQCzipGWzhTcZYfMLcK89yHIXFOeuHgOsdLct9XwwhGHu75gnZQ7XCW9OIc9Qx7I7sQbQ64MATntDgvDA6WObK1d7Grv1wTtDRBZ52YLIqDiCTjj3Vaep0iyUmkzo_3aKBipWsS9Kc-Ew-Onjc0E6TNySrh6AgfRFbrK2bR");'></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-background-dark"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent h-32 mt-auto"></div>
+</div>
+<div class="flex-1 px-6 -mt-24">
+<div class="flex flex-col items-center justify-center mb-8">
+<div class="flex items-center gap-2.5 bg-warning text-black px-6 py-3.5 rounded-full shadow-[0_8px_30px_rgba(251,191,36,0.3)] transform hover:scale-105 transition-transform duration-300 ring-4 ring-warning/20">
+<span class="material-symbols-outlined text-2xl font-bold">question_mark</span>
+<span class="text-lg font-extrabold tracking-tight">UNCERTAIN</span>
+</div>
+<div class="mt-3 px-4 py-1.5 rounded-full bg-surface-dark border border-white/10 backdrop-blur-md">
+<p class="text-warning text-xs font-bold tracking-wider uppercase">Confidence: 62%</p>
+</div>
+</div>
+<div class="text-center mb-8">
+<h1 class="text-3xl font-bold text-white mb-2 leading-tight">Creamy Mushroom Soup</h1>
+<p class="text-gray-400 text-sm font-medium flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-base">schedule</span>
+                        Scanned just now
+                    </p>
+</div>
+<div class="mb-6">
+<div class="flex items-center justify-between mb-3 px-1">
+<div class="flex items-center gap-2 text-warning">
+<span class="material-symbols-outlined text-xl fill-1">warning</span>
+<h2 class="text-sm font-bold uppercase tracking-wider">Cannot Determine</h2>
+</div>
+</div>
+<div class="bg-surface-dark border border-warning/20 rounded-2xl overflow-hidden">
+<div class="p-5 border-b border-white/5">
+<p class="text-gray-300 text-sm leading-relaxed">
+                            We found ingredients that are ambiguous or have multiple potential sources. We cannot confirm if this meets your dietary profile.
+                        </p>
+</div>
+<div class="p-5 pb-2">
+<h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Ambiguous Items</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-warning shrink-0 shadow-[0_0_8px_rgba(251,191,36,0.8)]"></div>
+<div>
+<span class="text-white font-semibold block text-base">Natural flavoring</span>
+<span class="text-gray-400 text-xs">Origin unspecified (Plant or Animal?)</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="mt-1 w-2 h-2 rounded-full bg-warning shrink-0 shadow-[0_0_8px_rgba(251,191,36,0.8)]"></div>
+<div>
+<span class="text-white font-semibold block text-base">E471</span>
+<span class="text-gray-400 text-xs">Mono- and diglycerides of fatty acids</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="mt-3 bg-warning-surface p-5 border-t border-warning/10">
+<h3 class="text-warning font-bold text-sm mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">lightbulb</span>
+                                Recommendation
+                            </h3>
+<p class="text-gray-300 text-sm leading-relaxed">
+                                It is safer to avoid this product or contact the manufacturer directly for clarification on the sourcing of these ingredients.
+                            </p>
+</div>
+</div>
+</div>
+<div class="space-y-3 pb-8">
+<button class="w-full flex items-center justify-between p-4 bg-surface-dark hover:bg-white/5 border border-white/5 rounded-xl transition-all group active:scale-[0.99]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20">
+<span class="material-symbols-outlined text-xl">report</span>
+</div>
+<span class="text-white font-bold text-sm">Report Product for Review</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-white transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

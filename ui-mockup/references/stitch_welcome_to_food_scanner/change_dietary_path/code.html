@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Change Dietary Path</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#30e86e",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112116",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2c20",
+            },
+            fontFamily: {
+              "display": ["Manrope", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      /* Custom radio button styling to match design request */
+      .custom-radio:checked + div {
+        border-color: #30e86e;
+        background-color: #f0fdf4;
+      }
+      .custom-radio:checked + div .radio-indicator {
+        border-color: #30e86e;
+        background-color: #30e86e;
+      }
+      .custom-radio:checked + div .radio-indicator::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+      
+      /* Dark mode overrides */
+      .dark .custom-radio:checked + div {
+        background-color: rgba(48, 232, 110, 0.1);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-[#111813] dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-surface-light dark:bg-surface-dark shadow-xl overflow-hidden">
+<!-- Header -->
+<header class="flex items-center px-4 py-4 justify-between bg-surface-light dark:bg-surface-dark sticky top-0 z-10">
+<button class="text-[#111813] dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-[#111813] dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">
+                Change Dietary Path
+            </h2>
+</header>
+<!-- Main Content: Scrollable List -->
+<main class="flex-1 overflow-y-auto px-4 pb-24">
+<div class="py-2">
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-6 text-center">
+                    Select your primary dietary community. This will customize your food scanning results.
+                </p>
+<div class="flex flex-col gap-3">
+<!-- Option 1: Vegan -->
+<label class="group relative cursor-pointer">
+<input checked="" class="custom-radio peer sr-only" name="dietary-path" type="radio" value="vegan"/>
+<div class="flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2c20] p-4 transition-all duration-200 hover:border-primary/50">
+<div class="flex items-center justify-center rounded-lg bg-[#f0f4f2] dark:bg-gray-800 text-[#111813] dark:text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Vegan</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal mt-0.5">Excludes all animal products</p>
+</div>
+<div class="radio-indicator shrink-0 size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center transition-colors"></div>
+</div>
+</label>
+<!-- Option 2: Jain -->
+<label class="group relative cursor-pointer">
+<input class="custom-radio peer sr-only" name="dietary-path" type="radio" value="jain"/>
+<div class="flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2c20] p-4 transition-all duration-200 hover:border-primary/50">
+<div class="flex items-center justify-center rounded-lg bg-[#f0f4f2] dark:bg-gray-800 text-[#111813] dark:text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">front_hand</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Jain</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal mt-0.5">Sattvic diet excluding root vegetables</p>
+</div>
+<div class="radio-indicator shrink-0 size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center transition-colors"></div>
+</div>
+</label>
+<!-- Option 3: Swaminarayan -->
+<label class="group relative cursor-pointer">
+<input class="custom-radio peer sr-only" name="dietary-path" type="radio" value="swaminarayan"/>
+<div class="flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2c20] p-4 transition-all duration-200 hover:border-primary/50">
+<div class="flex items-center justify-center rounded-lg bg-[#f0f4f2] dark:bg-gray-800 text-[#111813] dark:text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">temple_hindu</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Swaminarayan</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal mt-0.5">Strict vegetarian excluding onion &amp; garlic</p>
+</div>
+<div class="radio-indicator shrink-0 size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center transition-colors"></div>
+</div>
+</label>
+<!-- Option 4: Vaishnava -->
+<label class="group relative cursor-pointer">
+<input class="custom-radio peer sr-only" name="dietary-path" type="radio" value="vaishnava"/>
+<div class="flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2c20] p-4 transition-all duration-200 hover:border-primary/50">
+<div class="flex items-center justify-center rounded-lg bg-[#f0f4f2] dark:bg-gray-800 text-[#111813] dark:text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Vaishnava</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal mt-0.5">Lacto-vegetarian diet offered to Krishna</p>
+</div>
+<div class="radio-indicator shrink-0 size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center transition-colors"></div>
+</div>
+</label>
+<!-- Option 5: Gluten-Free -->
+<label class="group relative cursor-pointer">
+<input class="custom-radio peer sr-only" name="dietary-path" type="radio" value="gluten-free"/>
+<div class="flex items-center gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2c20] p-4 transition-all duration-200 hover:border-primary/50">
+<div class="flex items-center justify-center rounded-lg bg-[#f0f4f2] dark:bg-gray-800 text-[#111813] dark:text-primary shrink-0 size-12">
+<span class="material-symbols-outlined">grain</span>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Gluten-Free</p>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium leading-normal mt-0.5">Strict avoidance of wheat, barley, rye</p>
+</div>
+<div class="radio-indicator shrink-0 size-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center transition-colors"></div>
+</div>
+</label>
+</div>
+</div>
+</main>
+<!-- Sticky Footer -->
+<div class="fixed bottom-0 left-0 right-0 z-20 w-full max-w-md mx-auto bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 px-4 py-4 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3.5 text-[#111813] text-base font-bold transition-transform active:scale-[0.98] hover:bg-green-400 shadow-lg shadow-green-500/20">
+                Save Changes
+            </button>
+</div>
+</div>
+</body></html>

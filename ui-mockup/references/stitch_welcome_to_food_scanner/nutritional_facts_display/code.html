@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nutritional Facts</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        /* Hide scrollbar for clean horizontal scroll if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#1f2937] dark:text-white transition-colors duration-200">
+<div class="relative flex h-full w-full flex-col group/design-root overflow-x-hidden max-w-md mx-auto min-h-screen bg-white dark:bg-[#1a2c20] shadow-xl">
+<!-- Header -->
+<div class="sticky top-0 z-10 flex items-center bg-white/90 dark:bg-[#1a2c20]/90 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<button class="text-[#0e1b12] dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-[#0e1b12] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Nutritional Facts</h2>
+</div>
+<!-- Product Hero -->
+<div class="flex p-4 pb-2 @container">
+<div class="flex w-full flex-col gap-4">
+<div class="flex gap-5 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl h-24 w-24 shadow-sm border border-gray-100 dark:border-gray-700 shrink-0" data-alt="Carton of organic almond milk with almond illustrations" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB4kjjxvXDiI1eg7y3jhU4o5lVXpMwEcb6d8SkYLeGkAQaM3a5VyuIvzc4HlgYV-84VIN14QjlAdxZSTlQMhXRdUaFPqRi-ZgeD667DUFNXty8ElRsaAhzuJG42lXTjQqZDEHO6seFIlrEHzV-jlmIoQaiEUFyp6bmsx3r69yXbuZW0IbejavMufyIQj6sVpVQENDqCeYY_6UXOBhKnRAWzBJzkrfXcL1d7fOyFoZeNDW_CrD6vzRZ6gpiXYnSFLx-GWdP7pIYq7AY3");'>
+</div>
+<div class="flex flex-col flex-1 justify-center">
+<h1 class="text-[#0e1b12] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] mb-1">Organic Almond Milk</h1>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-green-800 dark:text-green-100">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                                Safe (95/100)
+                            </span>
+<span class="text-gray-400 dark:text-gray-500 text-sm">• Brand Name</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Allergen Alert Card -->
+<div class="px-4 py-2">
+<div class="flex items-center justify-between gap-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border border-orange-100 dark:border-orange-900/30 p-4">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-orange-600 dark:text-orange-400">warning</span>
+<p class="text-orange-900 dark:text-orange-100 text-base font-bold leading-tight">Allergen Alert</p>
+</div>
+<p class="text-orange-800 dark:text-orange-200 text-sm font-medium leading-normal pl-8">Contains Nuts (Almonds)</p>
+</div>
+<!-- Small visual for the allergen -->
+<div class="w-16 h-16 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 opacity-80 mix-blend-multiply dark:mix-blend-normal" data-alt="Pile of almonds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVagjhNO04J86HBV2fR4LFrb9xlMqrvNXY9cMmyPwy8O2IYET3Ygda_P0wqEDiW9yeUGHWWLzq-JaM0lFQ6xdB-BikRVF-YTPXT4iggAc2ZL9HKumYzrarVZWGkGgHVQ18UFg5UN1j5CVOxUmPxyq-ThX-mUXRklJQTv3s2rXqRTCB_r-TGfvPePg6DvXUrXXIlnxpRQCD8uPQNNMH36RAnU87c1CEHptyh7Oo66AhjQIoxzwgkofVsC1W2PQ3npwoO8nQFsGELNk9");'>
+</div>
+</div>
+</div>
+<!-- Serving Toggle -->
+<div class="flex px-4 py-4">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-[#e7f3eb] dark:bg-gray-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-[#1a2c20] has-[:checked]:shadow-sm has-[:checked]:text-[#0e1b12] dark:has-[:checked]:text-white text-[#4e9767] dark:text-gray-400 text-sm font-semibold leading-normal">
+<span class="truncate">Per Serving (240ml)</span>
+<input checked="" class="invisible w-0 absolute" name="serving_toggle" type="radio" value="Per Serving"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 transition-all has-[:checked]:bg-white dark:has-[:checked]:bg-[#1a2c20] has-[:checked]:shadow-sm has-[:checked]:text-[#0e1b12] dark:has-[:checked]:text-white text-[#4e9767] dark:text-gray-400 text-sm font-semibold leading-normal">
+<span class="truncate">Per 100ml</span>
+<input class="invisible w-0 absolute" name="serving_toggle" type="radio" value="Per 100g"/>
+</label>
+</div>
+</div>
+<!-- Macro Stats -->
+<div class="flex gap-3 px-4 pb-6">
+<div class="flex min-w-[30%] flex-1 flex-col gap-1 rounded-xl p-4 bg-background-light dark:bg-white/5 border border-transparent dark:border-white/5">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Calories</p>
+<div class="flex items-end gap-1">
+<p class="text-[#0e1b12] dark:text-white text-3xl font-extrabold leading-none">60</p>
+<span class="text-xs font-medium text-gray-500 mb-1">kcal</span>
+</div>
+</div>
+<div class="flex min-w-[30%] flex-1 flex-col gap-1 rounded-xl p-4 bg-background-light dark:bg-white/5 border border-transparent dark:border-white/5">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Protein</p>
+<div class="flex items-end gap-1">
+<p class="text-[#0e1b12] dark:text-white text-3xl font-extrabold leading-none">1</p>
+<span class="text-xs font-medium text-gray-500 mb-1">g</span>
+</div>
+</div>
+<div class="flex min-w-[30%] flex-1 flex-col gap-1 rounded-xl p-4 bg-background-light dark:bg-white/5 border border-transparent dark:border-white/5">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Carbs</p>
+<div class="flex items-end gap-1">
+<p class="text-[#0e1b12] dark:text-white text-3xl font-extrabold leading-none">8</p>
+<span class="text-xs font-medium text-gray-500 mb-1">g</span>
+</div>
+</div>
+</div>
+<!-- Detailed List Header -->
+<div class="px-4 pb-2">
+<h3 class="text-[#0e1b12] dark:text-white text-lg font-bold">Nutritional Breakdown</h3>
+</div>
+<!-- Detailed Nutrition Table -->
+<div class="flex flex-col px-4 pb-8">
+<!-- Row: Total Fat -->
+<div class="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">Total Fat</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">2.5g</span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">3%</span>
+</div>
+</div>
+<!-- Nested: Saturated Fat -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-4">
+<span class="text-gray-600 dark:text-gray-400 text-sm">Saturated Fat</span>
+<span class="text-gray-600 dark:text-gray-400 text-sm">0g</span>
+</div>
+<!-- Nested: Trans Fat -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-4">
+<span class="text-gray-600 dark:text-gray-400 text-sm">Trans Fat</span>
+<span class="text-gray-600 dark:text-gray-400 text-sm">0g</span>
+</div>
+<!-- Row: Cholesterol -->
+<div class="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-800">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">Cholesterol</span>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">0mg</span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">0%</span>
+</div>
+</div>
+<!-- Row: Sodium -->
+<div class="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-800">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">Sodium</span>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">150mg</span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">7%</span>
+</div>
+</div>
+<!-- Row: Total Carbohydrate -->
+<div class="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-800">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">Total Carbohydrate</span>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">8g</span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">3%</span>
+</div>
+</div>
+<!-- Nested: Fiber -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-4">
+<span class="text-gray-600 dark:text-gray-400 text-sm">Dietary Fiber</span>
+<div class="flex items-center gap-3">
+<span class="text-gray-600 dark:text-gray-400 text-sm">1g</span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">4%</span>
+</div>
+</div>
+<!-- Nested: Sugars -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-4">
+<span class="text-gray-600 dark:text-gray-400 text-sm">Total Sugars</span>
+<span class="text-gray-600 dark:text-gray-400 text-sm">7g</span>
+</div>
+<!-- Nested: Added Sugars -->
+<div class="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-800 pl-8">
+<span class="text-gray-500 dark:text-gray-500 text-xs italic">Includes 7g Added Sugars</span>
+<div class="flex items-center gap-3">
+<span class="text-gray-500 dark:text-gray-500 text-xs"></span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">14%</span>
+</div>
+</div>
+<!-- Row: Protein -->
+<div class="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-800">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">Protein</span>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[#0e1b12] dark:text-white text-sm">1g</span>
+<span class="text-xs font-medium text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">2%</span>
+</div>
+</div>
+</div>
+<!-- Micronutrients -->
+<div class="px-4 pb-2">
+<h3 class="text-[#0e1b12] dark:text-white text-base font-bold mb-2">Vitamins &amp; Minerals</h3>
+<div class="grid grid-cols-2 gap-3 mb-6">
+<div class="flex flex-col p-3 rounded-lg bg-background-light dark:bg-white/5">
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium">Calcium</span>
+<span class="text-sm font-bold text-[#0e1b12] dark:text-white">450mg (35%)</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-background-light dark:bg-white/5">
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium">Vitamin D</span>
+<span class="text-sm font-bold text-[#0e1b12] dark:text-white">5mcg (25%)</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-background-light dark:bg-white/5">
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium">Iron</span>
+<span class="text-sm font-bold text-[#0e1b12] dark:text-white">0.4mg (2%)</span>
+</div>
+<div class="flex flex-col p-3 rounded-lg bg-background-light dark:bg-white/5">
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium">Potassium</span>
+<span class="text-sm font-bold text-[#0e1b12] dark:text-white">170mg (4%)</span>
+</div>
+</div>
+</div>
+<!-- Footer Disclaimer -->
+<div class="px-6 pb-12">
+<p class="text-[11px] text-gray-400 dark:text-gray-600 text-center leading-relaxed">
+                * The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.
+            </p>
+</div>
+</div>
+</body></html>

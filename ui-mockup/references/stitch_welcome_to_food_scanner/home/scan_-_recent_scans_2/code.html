@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Scanner - Recent Scans</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#30e86e",
+                "background-light": "#f6f8f6",
+                "background-dark": "#112116",
+                },
+                fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111813] dark:text-white overflow-x-hidden antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-[#112116] shadow-2xl overflow-hidden pb-24">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex items-center bg-white dark:bg-[#112116] p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<h2 class="text-[#111813] dark:text-white text-xl font-extrabold leading-tight tracking-[-0.015em] flex-1">Food Scanner</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full size-10 bg-transparent text-[#111813] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<!-- Main Content Scroll Area -->
+<div class="flex-1 overflow-y-auto no-scrollbar">
+<!-- Headline Text -->
+<div class="pt-6 px-4">
+<h2 class="text-[#111813] dark:text-white tracking-tight text-[28px] font-bold leading-tight text-left pb-1">Recent Scans</h2>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-4">Check your history and detailed breakdowns.</p>
+</div>
+<!-- List Item: Unsafe -->
+<div class="flex flex-col gap-0 px-4">
+<div class="flex flex-col w-full bg-white dark:bg-[#1a2e22] rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden mb-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex gap-4 p-4 justify-between items-center">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-red-500 bg-red-50 dark:bg-red-900/20 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined filled">cancel</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<div class="flex items-center gap-2">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Spicy Potato Chips</p>
+</div>
+<p class="text-red-600 dark:text-red-400 text-sm font-semibold leading-normal">Contains: Onion Powder</p>
+<p class="text-gray-400 dark:text-gray-500 text-xs font-medium leading-normal mt-1">2m ago • Confidence: 94%</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<span class="px-2 py-1 rounded-md bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-[10px] font-bold uppercase tracking-wider">Unsafe</span>
+</div>
+</div>
+</div>
+<!-- List Item: Safe -->
+<div class="flex flex-col w-full bg-white dark:bg-[#1a2e22] rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden mb-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex gap-4 p-4 justify-between items-center">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-[#111813] dark:text-white flex items-center justify-center rounded-xl bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-primary-dark font-bold">check_circle</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Almond Milk</p>
+<p class="text-primary-700 dark:text-primary text-sm font-medium leading-normal">Dietary Match: Vegan</p>
+<p class="text-gray-400 dark:text-gray-500 text-xs font-medium leading-normal mt-1">2h ago • Confidence: 99%</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<span class="px-2 py-1 rounded-md bg-primary/20 text-green-800 dark:text-primary text-[10px] font-bold uppercase tracking-wider">Safe</span>
+</div>
+</div>
+</div>
+<!-- List Item: Safe -->
+<div class="flex flex-col w-full bg-white dark:bg-[#1a2e22] rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden mb-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex gap-4 p-4 justify-between items-center">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-[#111813] dark:text-white flex items-center justify-center rounded-xl bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined text-primary-dark font-bold">check_circle</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Green Apple</p>
+<p class="text-primary-700 dark:text-primary text-sm font-medium leading-normal">Fresh Produce</p>
+<p class="text-gray-400 dark:text-gray-500 text-xs font-medium leading-normal mt-1">Yesterday • Confidence: 100%</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<span class="px-2 py-1 rounded-md bg-primary/20 text-green-800 dark:text-primary text-[10px] font-bold uppercase tracking-wider">Safe</span>
+</div>
+</div>
+</div>
+<!-- List Item: Unsafe -->
+<div class="flex flex-col w-full bg-white dark:bg-[#1a2e22] rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden mb-3 hover:shadow-md transition-shadow cursor-pointer">
+<div class="flex gap-4 p-4 justify-between items-center">
+<div class="flex items-start gap-4 flex-1">
+<div class="text-red-500 bg-red-50 dark:bg-red-900/20 flex items-center justify-center rounded-xl shrink-0 size-12">
+<span class="material-symbols-outlined filled">cancel</span>
+</div>
+<div class="flex flex-1 flex-col justify-center gap-0.5">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-normal">Peanut Butter Bar</p>
+<p class="text-red-600 dark:text-red-400 text-sm font-semibold leading-normal">Contains: Peanuts</p>
+<p class="text-gray-400 dark:text-gray-500 text-xs font-medium leading-normal mt-1">Yesterday • Confidence: 98%</p>
+</div>
+</div>
+<div class="shrink-0 flex flex-col items-end gap-1">
+<span class="px-2 py-1 rounded-md bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-[10px] font-bold uppercase tracking-wider">Unsafe</span>
+</div>
+</div>
+</div>
+<!-- Footer Link -->
+<div class="w-full flex justify-center py-6 pb-8">
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:text-green-500 transition-colors">
+                        View All History 
+                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="h-20 bg-transparent"></div> <!-- Spacer for fixed nav -->
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-50 bg-white/90 dark:bg-[#112116]/90 backdrop-blur-md border-t border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-around h-[80px] px-2 pb-4 pt-2">
+<!-- History Tab -->
+<button class="flex flex-col items-center justify-center gap-1 w-20 text-gray-400 hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">history</span>
+<span class="text-[10px] font-bold tracking-wide">History</span>
+</button>
+<!-- Scan Tab (Main) -->
+<button class="relative -top-6 flex items-center justify-center size-16 bg-primary text-[#112116] rounded-full shadow-lg shadow-primary/40 ring-4 ring-white dark:ring-[#112116] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[32px]">filter_center_focus</span>
+</button>
+<!-- Profile Tab -->
+<button class="flex flex-col items-center justify-center gap-1 w-20 text-gray-400 hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">person</span>
+<span class="text-[10px] font-bold tracking-wide">Profile</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

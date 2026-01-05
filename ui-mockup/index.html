@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Scanner - UI Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="mockup-container">
+        <!-- Navigation Header -->
+        <header class="mockup-header">
+            <h1>🥫 Food Scanner UI Mockup</h1>
+            <p>Scroll down to view all screens in order</p>
+            <nav class="screen-nav">
+                <a href="#auth-section">Auth</a>
+                <a href="#onboarding-section">Onboarding</a>
+                <a href="#main-app-section">Main App</a>
+                <a href="#results-section">Results</a>
+            </nav>
+        </header>
+
+        <!-- ============================================ -->
+        <!-- SECTION 1: AUTHENTICATION SCREENS -->
+        <!-- ============================================ -->
+        <section id="auth-section" class="screen-section">
+            <h2 class="section-title">1. Authentication Screens</h2>
+            
+            <div class="screen-row">
+                <!-- LOGIN SCREEN -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Login Screen</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen auth-screen">
+                            <div class="auth-logo">
+                                <span class="logo-icon">🥫</span>
+                                <h1 class="logo-title">Food Scanner</h1>
+                                <p class="logo-tagline">Eat with Confidence</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Email</label>
+                                <input type="email" class="text-input" placeholder="you@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" class="text-input" placeholder="••••••••">
+                                    <button class="password-toggle">👁️</button>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-full">Sign In</button>
+                            
+                            <div class="divider">
+                                <span>or continue with</span>
+                            </div>
+                            
+                            <button class="btn btn-google btn-full">
+                                <span class="google-icon">G</span>
+                                Continue with Google
+                            </button>
+                            
+                            <div class="auth-footer">
+                                <a href="#" class="link">Forgot Password?</a>
+                                <span class="separator">|</span>
+                                <a href="#" class="link link-primary">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIGN UP SCREEN -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Sign Up Screen</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen auth-screen">
+                            <div class="auth-logo auth-logo-compact">
+                                <span class="logo-icon">🥫</span>
+                                <h1 class="logo-title">Food Scanner</h1>
+                                <p class="logo-tagline">Create Account</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Full Name</label>
+                                <input type="text" class="text-input" placeholder="Ravi Patel">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Email</label>
+                                <input type="email" class="text-input" placeholder="you@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" class="text-input" placeholder="Min 8 characters">
+                                    <button class="password-toggle">👁️</button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="input-label">Confirm Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" class="text-input" placeholder="••••••••">
+                                    <button class="password-toggle">👁️</button>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-full">Create Account</button>
+                            
+                            <div class="divider">
+                                <span>or sign up with</span>
+                            </div>
+                            
+                            <button class="btn btn-google btn-full">
+                                <span class="google-icon">G</span>
+                                Sign up with Google
+                            </button>
+                            
+                            <div class="auth-footer">
+                                <span>Already have an account?</span>
+                                <a href="#" class="link link-primary">Login</a>
+                            </div>
+                            
+                            <p class="terms-text">
+                                By joining, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 2: ONBOARDING SCREENS -->
+        <!-- ============================================ -->
+        <section id="onboarding-section" class="screen-section">
+            <h2 class="section-title">2. Onboarding Flow (9 Screens)</h2>
+            
+            <!-- SCREEN 1: WELCOME -->
+            <div class="screen-row">
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 1: Welcome</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 0%"></div>
+                            </div>
+                            
+                            <div class="welcome-content">
+                                <span class="welcome-icon">🙏</span>
+                                <h1 class="welcome-title">Food Scanner</h1>
+                                <h2 class="welcome-subtitle">Eat with Confidence</h2>
+                                <p class="welcome-text">Know what's safe for you</p>
+                                
+                                <div class="welcome-illustration">
+                                    <div class="illustration-placeholder">
+                                        <span>📱🔍🥗</span>
+                                        <p>Person scanning food</p>
+                                    </div>
+                                </div>
+                                
+                                <p class="welcome-description">
+                                    We help you find products that match your dietary beliefs and allergies.
+                                </p>
+                                
+                                <div class="steps-list">
+                                    <p class="steps-title">Simple 3 steps:</p>
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <span>Tell us your diet</span>
+                                    </div>
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <span>Scan a product</span>
+                                    </div>
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <span>We'll tell if it's safe</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer">
+                                <button class="btn btn-primary btn-full">
+                                    Get Started →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCREEN 2: COMMUNITY SELECTION -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 2: Community Selection</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 10%"></div>
+                            </div>
+                            
+                            <div class="screen-content">
+                                <h1 class="screen-title">What's Your Dietary Path?</h1>
+                                <p class="screen-subtitle">(You must select one)</p>
+                                
+                                <div class="community-options">
+                                    <div class="community-card selected">
+                                        <div class="community-icon">🙏</div>
+                                        <div class="community-info">
+                                            <h3>Jain</h3>
+                                            <p>No meat, onion, garlic, root vegetables</p>
+                                        </div>
+                                        <div class="checkmark">✓</div>
+                                    </div>
+                                    
+                                    <div class="community-card">
+                                        <div class="community-icon">🕉️</div>
+                                        <div class="community-info">
+                                            <h3>Vaishnava</h3>
+                                            <p>Sattvic diet, no meat, onion, garlic</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="community-card">
+                                        <div class="community-icon">🕉️</div>
+                                        <div class="community-info">
+                                            <h3>Swaminarayan</h3>
+                                            <p>Lacto-vegetarian, pure foods only</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="community-card">
+                                        <div class="community-icon">☘️</div>
+                                        <div class="community-info">
+                                            <h3>Vegan</h3>
+                                            <p>Plant-based, no animal products</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer">
+                                <button class="btn btn-primary btn-full">
+                                    Next →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREENS 3-7: RESTRICTIONS -->
+            <div class="screen-row">
+                <!-- SCREEN 3: PROTEINS & MEAT -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 3: Proteins & Meat</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 20%"></div>
+                            </div>
+                            
+                            <div class="screen-content restrictions-screen">
+                                <h1 class="screen-title">Your Jain Restrictions</h1>
+                                <p class="screen-subtitle">Category 1 of 5: Proteins & Meat</p>
+                                
+                                <div class="search-box">
+                                    <span class="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search restrictions...">
+                                </div>
+                                
+                                <div class="category-header">
+                                    <span class="category-icon">🍖</span>
+                                    <span>Meat & Protein</span>
+                                </div>
+                                
+                                <div class="restriction-list">
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Meat (all types)</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Poultry</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Fish & Seafood</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Eggs</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Dairy</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="toggle-legend">
+                                    <span class="legend-item"><span class="dot active"></span> Avoiding</span>
+                                    <span class="legend-item"><span class="dot"></span> Allowing</span>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer dual-buttons">
+                                <button class="btn btn-secondary">← Previous</button>
+                                <button class="btn btn-primary">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCREEN 4: VEGETABLES & ROOTS -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 4: Vegetables & Roots</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 40%"></div>
+                            </div>
+                            
+                            <div class="screen-content restrictions-screen">
+                                <h1 class="screen-title">Your Jain Restrictions</h1>
+                                <p class="screen-subtitle">Category 2 of 5: Vegetables & Roots</p>
+                                
+                                <div class="search-box">
+                                    <span class="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search restrictions...">
+                                </div>
+                                
+                                <div class="category-header">
+                                    <span class="category-icon">🥕</span>
+                                    <span>Vegetables & Roots</span>
+                                </div>
+                                
+                                <div class="restriction-list">
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Onion</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Garlic</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Potatoes</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Carrots</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Radish</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="toggle-legend">
+                                    <span class="legend-item"><span class="dot active"></span> Avoiding</span>
+                                    <span class="legend-item"><span class="dot"></span> Allowing</span>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer dual-buttons">
+                                <button class="btn btn-secondary">← Previous</button>
+                                <button class="btn btn-primary">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-row">
+                <!-- SCREEN 5: ADDITIVES & E-NUMBERS -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 5: Additives & E-Numbers</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                            
+                            <div class="screen-content restrictions-screen">
+                                <h1 class="screen-title">Your Jain Restrictions</h1>
+                                <p class="screen-subtitle">Category 3 of 5: Additives & E-Numbers</p>
+                                
+                                <div class="search-box">
+                                    <span class="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search restrictions...">
+                                </div>
+                                
+                                <div class="category-header">
+                                    <span class="category-icon">🧪</span>
+                                    <span>Additives & E-Numbers</span>
+                                </div>
+                                
+                                <div class="restriction-list">
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">E120 (Cochineal)</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">E441 (Gelatin)</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">E471 (Mono-diglycerides)</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">E631 (Disodium inosinate)</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">E904 (Shellac)</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer dual-buttons">
+                                <button class="btn btn-secondary">← Previous</button>
+                                <button class="btn btn-primary">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCREEN 6: FERMENTED & HONEY -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 6: Fermented & Honey</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 80%"></div>
+                            </div>
+                            
+                            <div class="screen-content restrictions-screen">
+                                <h1 class="screen-title">Your Jain Restrictions</h1>
+                                <p class="screen-subtitle">Category 4 of 5: Fermented & Honey</p>
+                                
+                                <div class="search-box">
+                                    <span class="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search restrictions...">
+                                </div>
+                                
+                                <div class="category-header">
+                                    <span class="category-icon">🍯</span>
+                                    <span>Fermented & Honey</span>
+                                </div>
+                                
+                                <div class="restriction-list">
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Honey</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Alcohol</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Vinegar</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Yeast</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Fermented foods</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer dual-buttons">
+                                <button class="btn btn-secondary">← Previous</button>
+                                <button class="btn btn-primary">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-row">
+                <!-- SCREEN 7: OTHER ITEMS -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 7: Other Items</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 90%"></div>
+                            </div>
+                            
+                            <div class="screen-content restrictions-screen">
+                                <h1 class="screen-title">Your Jain Restrictions</h1>
+                                <p class="screen-subtitle">Category 5 of 5: Other Items</p>
+                                
+                                <div class="search-box">
+                                    <span class="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search restrictions...">
+                                </div>
+                                
+                                <div class="category-header">
+                                    <span class="category-icon">🍽️</span>
+                                    <span>Other Items</span>
+                                </div>
+                                
+                                <div class="restriction-list">
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Mushrooms</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Caffeine</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Chocolate</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Natural Flavoring</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer dual-buttons">
+                                <button class="btn btn-secondary">← Previous</button>
+                                <button class="btn btn-primary">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SCREEN 8: ALLERGIES -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 8: Allergies</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 95%"></div>
+                            </div>
+                            
+                            <div class="screen-content restrictions-screen">
+                                <h1 class="screen-title">Do you have any allergies?</h1>
+                                <p class="screen-subtitle">Select all that apply (optional)</p>
+                                
+                                <div class="search-box">
+                                    <span class="search-icon">🔍</span>
+                                    <input type="text" placeholder="Search allergies...">
+                                </div>
+                                
+                                <div class="category-header">
+                                    <span class="category-icon">⚠️</span>
+                                    <span>Common Allergies</span>
+                                </div>
+                                
+                                <div class="restriction-list">
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Peanuts</span>
+                                        <label class="toggle active">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Tree Nuts</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Gluten</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Soy</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                    <div class="restriction-item">
+                                        <span class="restriction-name">Shellfish</span>
+                                        <label class="toggle">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-outline btn-full add-custom-btn">
+                                    + Add Custom Allergy
+                                </button>
+                                
+                                <div class="selected-count">
+                                    Selected: 1 allergy
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer dual-buttons">
+                                <button class="btn btn-secondary">← Previous</button>
+                                <button class="btn btn-primary">Next →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCREEN 9: SUMMARY -->
+            <div class="screen-row">
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Screen 9: Summary & Confirm</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen onboarding-screen">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                            
+                            <div class="screen-content summary-screen">
+                                <h1 class="screen-title">Your Dietary Profile</h1>
+                                
+                                <div class="summary-card">
+                                    <div class="summary-header">
+                                        <span class="community-badge">🙏 Jain</span>
+                                    </div>
+                                    
+                                    <div class="summary-section">
+                                        <div class="summary-icon safe">✅</div>
+                                        <div class="summary-content">
+                                            <h4>Following 18 restrictions</h4>
+                                            <ul>
+                                                <li>No meat, poultry, fish</li>
+                                                <li>No onion, garlic</li>
+                                                <li>No root vegetables</li>
+                                            </ul>
+                                            <a href="#" class="view-all-link">View all →</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="summary-section">
+                                        <div class="summary-icon exception">✓</div>
+                                        <div class="summary-content">
+                                            <h4>Exceptions (2)</h4>
+                                            <ul>
+                                                <li>Potatoes</li>
+                                                <li>Carrots</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="summary-section">
+                                        <div class="summary-icon warning">⚠️</div>
+                                        <div class="summary-content">
+                                            <h4>Allergies (1)</h4>
+                                            <ul>
+                                                <li>Peanuts</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="edit-buttons">
+                                    <button class="btn btn-outline">Edit</button>
+                                    <button class="btn btn-outline">Go Back</button>
+                                </div>
+                            </div>
+                            
+                            <div class="screen-footer">
+                                <button class="btn btn-primary btn-full btn-success">
+                                    ✓ Confirm & Start
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 3: MAIN APP SCREENS -->
+        <!-- ============================================ -->
+        <section id="main-app-section" class="screen-section">
+            <h2 class="section-title">3. Main App (Post-Onboarding)</h2>
+            
+            <div class="screen-row">
+                <!-- HOME SCREEN (EMPTY STATE) -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Home - Empty State</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen app-screen">
+                            <div class="app-header">
+                                <h1 class="app-title">Food Scanner</h1>
+                                <button class="header-icon">⚙️</button>
+                            </div>
+                            
+                            <div class="app-content home-empty">
+                                <div class="empty-icon">🥫</div>
+                                <h2>Scan a Product</h2>
+                                <p class="empty-description">
+                                    Point your camera at the ingredients list to check if it matches your Jain diet
+                                </p>
+                                
+                                <div class="tips-box">
+                                    <h4>Tips for best results:</h4>
+                                    <ul class="tips-list">
+                                        <li>• Good lighting</li>
+                                        <li>• Clear ingredients label</li>
+                                        <li>• Hold camera steady</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <nav class="bottom-nav">
+                                <div class="nav-item">
+                                    <span class="nav-icon">📋</span>
+                                    <span class="nav-label">History</span>
+                                </div>
+                                <div class="nav-item active scan-btn">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Scan</span>
+                                </div>
+                                <div class="nav-item">
+                                    <span class="nav-icon">👤</span>
+                                    <span class="nav-label">Profile</span>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOME SCREEN (WITH RECENT SCANS) -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Home - With Recent Scans</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen app-screen">
+                            <div class="app-header">
+                                <h1 class="app-title">Food Scanner</h1>
+                                <button class="header-icon">⚙️</button>
+                            </div>
+                            
+                            <div class="app-content">
+                                <h3 class="section-header">Recent Scans</h3>
+                                
+                                <div class="scan-card safe">
+                                    <div class="scan-verdict safe">🟢</div>
+                                    <div class="scan-info">
+                                        <div class="scan-header-row">
+                                            <span class="verdict-label safe">SAFE</span>
+                                            <span class="scan-time">2 min ago</span>
+                                        </div>
+                                        <h4 class="product-name">Lay's Classic Salted</h4>
+                                        <p class="confidence">Confidence: 94%</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="scan-card unsafe">
+                                    <div class="scan-verdict unsafe">🔴</div>
+                                    <div class="scan-info">
+                                        <div class="scan-header-row">
+                                            <span class="verdict-label unsafe">UNSAFE</span>
+                                            <span class="scan-time">1 hour ago</span>
+                                        </div>
+                                        <h4 class="product-name">Maggi Noodles</h4>
+                                        <p class="violation">Contains: Onion powder</p>
+                                    </div>
+                                </div>
+                                
+                                <a href="#" class="view-all-link centered">View All History →</a>
+                            </div>
+                            
+                            <nav class="bottom-nav">
+                                <div class="nav-item">
+                                    <span class="nav-icon">📋</span>
+                                    <span class="nav-label">History</span>
+                                </div>
+                                <div class="nav-item active scan-btn">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Scan</span>
+                                </div>
+                                <div class="nav-item">
+                                    <span class="nav-icon">👤</span>
+                                    <span class="nav-label">Profile</span>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-row">
+                <!-- CAMERA SCREEN -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Camera Screen</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen camera-screen">
+                            <div class="camera-header">
+                                <button class="close-btn">✕</button>
+                                <button class="flash-btn">💡</button>
+                            </div>
+                            
+                            <div class="camera-viewfinder">
+                                <div class="viewfinder-bg">
+                                    <div class="framing-guide">
+                                        <div class="corner tl"></div>
+                                        <div class="corner tr"></div>
+                                        <div class="corner bl"></div>
+                                        <div class="corner br"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="camera-controls">
+                                <button class="capture-btn">
+                                    <div class="capture-inner"></div>
+                                </button>
+                                <p class="photo-status">No photos yet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHOTO PREVIEW SCREEN -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Photo Preview (After Capture)</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen preview-screen">
+                            <div class="preview-header">
+                                <button class="back-btn">← Back</button>
+                                <button class="done-btn">✓</button>
+                            </div>
+                            
+                            <div class="photo-preview">
+                                <div class="preview-placeholder">
+                                    <span>📷</span>
+                                    <p>Photo Preview</p>
+                                </div>
+                            </div>
+                            
+                            <p class="photo-count">Photo 1 of 1</p>
+                            
+                            <div class="preview-actions">
+                                <button class="btn btn-outline btn-full">
+                                    🔄 Retake This Photo
+                                </button>
+                                <button class="btn btn-primary btn-full">
+                                    ✓ Start Scanning
+                                </button>
+                                <button class="btn btn-secondary btn-full">
+                                    📷 Add Another Photo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-row">
+                <!-- PROCESSING SCREEN -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Processing Screen</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen processing-screen">
+                            <div class="processing-content">
+                                <div class="processing-icon">🔄</div>
+                                <h2>Analyzing...</h2>
+                                
+                                <div class="processing-bar-container">
+                                    <div class="processing-bar" style="width: 35%"></div>
+                                </div>
+                                <p class="processing-percent">35%</p>
+                                
+                                <p class="processing-status">Extracting ingredients...</p>
+                                
+                                <div class="tip-box">
+                                    <span class="tip-icon">💡</span>
+                                    <div class="tip-content">
+                                        <p class="tip-label">Did you know?</p>
+                                        <p class="tip-text">E631 can be fish-derived or plant-based depending on region</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HISTORY TAB -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">History Tab</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen app-screen">
+                            <div class="app-header">
+                                <h1 class="app-title">History</h1>
+                                <div class="header-actions">
+                                    <button class="header-icon">🔍</button>
+                                    <button class="header-icon">⋮</button>
+                                </div>
+                            </div>
+                            
+                            <div class="app-content history-content">
+                                <div class="date-section">
+                                    <h4 class="date-header">▼ Today</h4>
+                                    
+                                    <div class="scan-card safe">
+                                        <div class="scan-verdict safe">🟢</div>
+                                        <div class="scan-info">
+                                            <h4 class="product-name">Lay's Classic</h4>
+                                            <p class="scan-meta">2:15 PM • Safe • 94%</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="scan-card unsafe">
+                                        <div class="scan-verdict unsafe">🔴</div>
+                                        <div class="scan-info">
+                                            <h4 class="product-name">Maggi Noodles</h4>
+                                            <p class="scan-meta">10:30 AM • Unsafe</p>
+                                            <p class="violation-small">Onion powder detected</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="date-section">
+                                    <h4 class="date-header">▼ Yesterday</h4>
+                                    
+                                    <div class="scan-card safe">
+                                        <div class="scan-verdict safe">🟢</div>
+                                        <div class="scan-info">
+                                            <h4 class="product-name">Amul Milk</h4>
+                                            <p class="scan-meta">8:45 PM • Safe • 98%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <nav class="bottom-nav">
+                                <div class="nav-item active">
+                                    <span class="nav-icon">📋</span>
+                                    <span class="nav-label">History</span>
+                                </div>
+                                <div class="nav-item scan-btn">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Scan</span>
+                                </div>
+                                <div class="nav-item">
+                                    <span class="nav-icon">👤</span>
+                                    <span class="nav-label">Profile</span>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-row">
+                <!-- PROFILE TAB -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Profile Tab</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen app-screen">
+                            <div class="app-header">
+                                <h1 class="app-title">Profile</h1>
+                            </div>
+                            
+                            <div class="app-content profile-content">
+                                <div class="profile-header">
+                                    <div class="avatar">👤</div>
+                                    <h3 class="user-name">Ravi Patel</h3>
+                                    <p class="user-email">ravi@example.com</p>
+                                    <span class="diet-badge">🙏 Jain Diet</span>
+                                </div>
+                                
+                                <div class="stats-card">
+                                    <div class="stat-item">
+                                        <span class="stat-value">47</span>
+                                        <span class="stat-label">Total Scans</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">12</span>
+                                        <span class="stat-label">This Month</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">38</span>
+                                        <span class="stat-label">Safe</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="settings-group">
+                                    <h4 class="group-title">⚙️ Account</h4>
+                                    <div class="menu-item">Edit Dietary Preferences</div>
+                                    <div class="menu-item">Email & Password</div>
+                                    <div class="menu-item danger">Delete Account</div>
+                                </div>
+                                
+                                <div class="settings-group">
+                                    <h4 class="group-title">🔒 Privacy & Data</h4>
+                                    <div class="menu-item">Download My Data</div>
+                                    <div class="menu-item">Delete Scan History</div>
+                                    <div class="menu-item">Privacy Policy</div>
+                                </div>
+                                
+                                <div class="settings-group">
+                                    <h4 class="group-title">💬 Support</h4>
+                                    <div class="menu-item">Contact Us</div>
+                                    <div class="menu-item">Report a Bug</div>
+                                    <div class="menu-item">FAQs</div>
+                                </div>
+                                
+                                <button class="btn btn-outline btn-full logout-btn">
+                                    🚪 Log Out
+                                </button>
+                            </div>
+                            
+                            <nav class="bottom-nav">
+                                <div class="nav-item">
+                                    <span class="nav-icon">📋</span>
+                                    <span class="nav-label">History</span>
+                                </div>
+                                <div class="nav-item scan-btn">
+                                    <span class="nav-icon">📷</span>
+                                    <span class="nav-label">Scan</span>
+                                </div>
+                                <div class="nav-item active">
+                                    <span class="nav-icon">👤</span>
+                                    <span class="nav-label">Profile</span>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- SECTION 4: RESULT SCREENS -->
+        <!-- ============================================ -->
+        <section id="results-section" class="screen-section">
+            <h2 class="section-title">4. Result Screens (All Verdicts)</h2>
+            
+            <div class="screen-row">
+                <!-- RESULT: SAFE -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Result: ✅ SAFE</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen result-screen">
+                            <div class="result-header">
+                                <button class="back-btn">← Back</button>
+                                <button class="share-btn">Share</button>
+                            </div>
+                            
+                            <div class="result-content">
+                                <div class="product-image-placeholder">
+                                    <span>📷</span>
+                                    <p>Product Image</p>
+                                </div>
+                                
+                                <div class="verdict-card safe">
+                                    <div class="verdict-icon">✅</div>
+                                    <div class="verdict-text">
+                                        <h2>SAFE FOR JAIN</h2>
+                                        <p class="confidence">Confidence: 94%</p>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="product-title">Lay's Classic Salted</h3>
+                                <p class="scan-timestamp">Scanned just now</p>
+                                
+                                <div class="ingredients-section">
+                                    <h4 class="section-title-small">
+                                        <span class="icon safe">✅</span> Ingredients (4 detected)
+                                    </h4>
+                                    <ul class="ingredient-list">
+                                        <li>• Potatoes</li>
+                                        <li>• Vegetable oil</li>
+                                        <li>• Salt</li>
+                                        <li>• Spices (verified no onion)</li>
+                                    </ul>
+                                    <button class="expand-btn">▶ Show full analysis</button>
+                                </div>
+                                
+                                <div class="result-actions">
+                                    <button class="btn btn-outline">🔄 Re-scan Product</button>
+                                    <button class="btn btn-outline warning">⚠️ Report Error</button>
+                                </div>
+                            </div>
+                            
+                            <div class="result-footer">
+                                <button class="btn btn-primary btn-full">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESULT: UNSAFE -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Result: ❌ UNSAFE</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen result-screen">
+                            <div class="result-header">
+                                <button class="back-btn">← Back</button>
+                            </div>
+                            
+                            <div class="result-content">
+                                <div class="product-image-placeholder">
+                                    <span>📷</span>
+                                    <p>Product Image</p>
+                                </div>
+                                
+                                <div class="verdict-card unsafe">
+                                    <div class="verdict-icon">❌</div>
+                                    <div class="verdict-text">
+                                        <h2>UNSAFE FOR JAIN</h2>
+                                        <p class="confidence">Confidence: 91%</p>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="product-title">Maggi 2-Minute Noodles</h3>
+                                <p class="scan-timestamp">Scanned 2 minutes ago</p>
+                                
+                                <div class="violations-section">
+                                    <h4 class="section-title-small">
+                                        <span class="icon unsafe">❌</span> Violations Found (2)
+                                    </h4>
+                                    <ul class="violation-list">
+                                        <li>• Onion powder</li>
+                                        <li>• Garlic powder</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="explanation-box">
+                                    <h4>Why It's Unsafe</h4>
+                                    <p>This product contains onion and garlic powder, which are not allowed in Jain diet.</p>
+                                </div>
+                                
+                                <button class="expand-btn">▶ View all ingredients</button>
+                                
+                                <div class="result-actions">
+                                    <button class="btn btn-outline">🔄 Re-scan Product</button>
+                                    <button class="btn btn-outline warning">⚠️ Report Error</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screen-row">
+                <!-- RESULT: CAUTION -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Result: ⚠️ CAUTION</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen result-screen">
+                            <div class="result-header">
+                                <button class="back-btn">← Back</button>
+                            </div>
+                            
+                            <div class="result-content">
+                                <div class="product-image-placeholder">
+                                    <span>📷</span>
+                                    <p>Product Image</p>
+                                </div>
+                                
+                                <div class="verdict-card caution">
+                                    <div class="verdict-icon">⚠️</div>
+                                    <div class="verdict-text">
+                                        <h2>CAUTION</h2>
+                                        <p class="confidence">Confidence: 78%</p>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="product-title">Imported Cookies</h3>
+                                <p class="scan-timestamp">Scanned just now</p>
+                                
+                                <div class="caution-section">
+                                    <h4 class="section-title-small">
+                                        <span class="icon caution">⚠️</span> Items to Check
+                                    </h4>
+                                    <ul class="caution-list">
+                                        <li>• E471 (likely plant-based in EU)</li>
+                                        <li>• Natural butter flavor</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="explanation-box caution">
+                                    <h4>Why Caution?</h4>
+                                    <p>Some ingredients may vary by region. These items are likely safe but we cannot be 100% certain.</p>
+                                </div>
+                                
+                                <div class="result-actions">
+                                    <button class="btn btn-outline">🔄 Re-scan Product</button>
+                                    <button class="btn btn-outline warning">⚠️ Report Error</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESULT: UNCERTAIN -->
+                <div class="screen-wrapper">
+                    <h3 class="screen-label">Result: ❓ UNCERTAIN</h3>
+                    <div class="phone-frame">
+                        <div class="phone-screen result-screen">
+                            <div class="result-header">
+                                <button class="back-btn">← Back</button>
+                            </div>
+                            
+                            <div class="result-content">
+                                <div class="product-image-placeholder">
+                                    <span>📷</span>
+                                    <p>Product Image</p>
+                                </div>
+                                
+                                <div class="verdict-card uncertain">
+                                    <div class="verdict-icon">❓</div>
+                                    <div class="verdict-text">
+                                        <h2>UNCERTAIN</h2>
+                                        <p class="confidence">Confidence: 62%</p>
+                                    </div>
+                                </div>
+                                
+                                <h3 class="product-title">Generic Cookies</h3>
+                                <p class="scan-timestamp">Scanned just now</p>
+                                
+                                <div class="uncertain-section">
+                                    <h4 class="section-title-small">
+                                        <span class="icon uncertain">⚠️</span> Cannot Determine
+                                    </h4>
+                                    <p>We cannot confidently determine if this is safe.</p>
+                                </div>
+                                
+                                <div class="ambiguous-section">
+                                    <h4>Ambiguous Items:</h4>
+                                    <ul class="ambiguous-list">
+                                        <li>• "Natural flavoring" (source unclear)</li>
+                                        <li>• E471 (could be plant or animal)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="recommendation-box">
+                                    <span class="rec-icon">💡</span>
+                                    <div class="rec-content">
+                                        <h4>Recommendation:</h4>
+                                        <p>Contact manufacturer or avoid this product to be safe.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="result-actions">
+                                    <button class="btn btn-outline warning btn-full">⚠️ Report Product for Review</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mockup-footer">
+            <p>Food Scanner UI Mockup - All screens designed for consistency</p>
+            <p class="footer-note">Based on Design System: Inter font, Emerald (#10B981) primary, Slate neutrals</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Meal Plan Viewer</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#30e86e",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112116",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1c2e22",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white pb-28">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight flex-1">My Meal Plan</h2>
+<div class="flex items-center justify-end">
+<button class="flex items-center justify-center rounded-full w-10 h-10 bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-900 dark:text-white transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Date Selector (Chips) -->
+<div class="flex gap-3 px-4 pb-3 overflow-x-auto no-scrollbar max-w-md mx-auto w-full snap-x">
+<!-- Active Day -->
+<div class="snap-start flex flex-col h-14 min-w-[64px] shrink-0 items-center justify-center rounded-xl bg-primary shadow-sm shadow-primary/20 cursor-pointer">
+<span class="text-[#0e1b12] text-xs font-semibold uppercase opacity-80">Mon</span>
+<span class="text-[#0e1b12] text-lg font-bold leading-none">11</span>
+</div>
+<!-- Inactive Days -->
+<div class="snap-start flex flex-col h-14 min-w-[64px] shrink-0 items-center justify-center rounded-xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Tue</span>
+<span class="text-slate-900 dark:text-white text-lg font-bold leading-none">12</span>
+</div>
+<div class="snap-start flex flex-col h-14 min-w-[64px] shrink-0 items-center justify-center rounded-xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Wed</span>
+<span class="text-slate-900 dark:text-white text-lg font-bold leading-none">13</span>
+</div>
+<div class="snap-start flex flex-col h-14 min-w-[64px] shrink-0 items-center justify-center rounded-xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Thu</span>
+<span class="text-slate-900 dark:text-white text-lg font-bold leading-none">14</span>
+</div>
+<div class="snap-start flex flex-col h-14 min-w-[64px] shrink-0 items-center justify-center rounded-xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Fri</span>
+<span class="text-slate-900 dark:text-white text-lg font-bold leading-none">15</span>
+</div>
+<div class="snap-start flex flex-col h-14 min-w-[64px] shrink-0 items-center justify-center rounded-xl bg-white dark:bg-surface-dark border border-slate-100 dark:border-slate-700 cursor-pointer hover:border-primary/50 transition-colors">
+<span class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Sat</span>
+<span class="text-slate-900 dark:text-white text-lg font-bold leading-none">16</span>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="max-w-md mx-auto w-full px-4 pt-2">
+<!-- Breakfast Section -->
+<section class="mt-4">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Breakfast</h3>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md">450 kcal</span>
+</div>
+<!-- Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-3 shadow-sm mb-3 flex gap-3 items-stretch relative overflow-hidden group">
+<div class="w-24 h-24 shrink-0 rounded-xl bg-cover bg-center" data-alt="Avocado toast on a white plate" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxUNa1AIDMl8J0E0olej1l8AJB1D0Uu4qlgGWu56YpVaNTS-tmFGzasdamH7EbCTEo0syBmp0kYQ1UEA5l-MvJ9cKskNMePlp-cuSQlpP-zIN9pcCttnJLAMTNA1ZCp4hmkjQpwLIxMyjaptUcSm4DCSed0-EmV61OCUyJrId18U_p5DLksj82w12sb3QLn9E6EuO9nVJN9btv9thBogGip8xrxYCpbTCcG9jFt4GHj3gR-8ReOKdQpj_HL_3xKx2VEpRJH5urDPTq");'></div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-base line-clamp-2">Avocado Toast &amp; Poached Egg</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 10 min
+                            </span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> 320 kcal
+                            </span>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex gap-1 mt-2">
+<span class="text-[10px] font-medium text-green-700 bg-green-100 dark:bg-green-900/30 dark:text-green-400 px-1.5 py-0.5 rounded">High Protein</span>
+</div>
+</div>
+<!-- Action Menu Button -->
+<button class="absolute top-2 right-2 p-1 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Add Button -->
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-dashed border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-bold text-sm transition-all active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                Add Breakfast Item
+            </button>
+</section>
+<!-- Lunch Section -->
+<section class="mt-8">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Lunch</h3>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md">520 kcal</span>
+</div>
+<!-- Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-3 shadow-sm mb-3 flex gap-3 items-stretch relative overflow-hidden group">
+<div class="w-24 h-24 shrink-0 rounded-xl bg-cover bg-center" data-alt="Bowl of healthy salad with vegetables" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGl6EbmE7XSpP38xmSJApcsdNJX41XQVGaDrvpXcUoHqbFd1lwfaL9-tt1HKsOhljpdrWRaWd6fSApLiMcbou_R_D2t9ZdKMNphL5B7ORkKCsd2WIOD27hu3RCCHWrbWFiI9SvgsmP1Bv1KrsfCAl8r4YnhM_dEKcncZ1ta2btO66mmqdKAZPsCa8tes1-2w9QAqobocu2_Vd8NuvHtihluov32cear1zrLWX2a-rGKF4xCMRlXoLtkMj9GZ_wEb1zmK2FKch2D_Y5");'></div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-base line-clamp-2">Quinoa Power Salad Bowl</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 15 min
+                            </span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> 410 kcal
+                            </span>
+</div>
+</div>
+<!-- Warning Tag (Allergy Context) -->
+<div class="flex gap-1 mt-2">
+<span class="text-[10px] font-medium text-amber-700 bg-amber-100 dark:bg-amber-900/30 dark:text-amber-400 px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">warning</span>
+                            Contains Nuts
+                        </span>
+</div>
+</div>
+<button class="absolute top-2 right-2 p-1 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-dashed border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-bold text-sm transition-all active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                Add Lunch Item
+            </button>
+</section>
+<!-- Dinner Section -->
+<section class="mt-8">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Dinner</h3>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md">600 kcal</span>
+</div>
+<!-- Card -->
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-3 shadow-sm mb-3 flex gap-3 items-stretch relative overflow-hidden group">
+<div class="w-24 h-24 shrink-0 rounded-xl bg-cover bg-center" data-alt="Grilled salmon with asparagus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBAjSz7qYVYRTIX0AWoh70hpW3NGO8pXSUQKDk3xZVlzgmM8s6TsJUVpx4U7c8emD149OzdOlCai1XvADWKzYDbyo8HqEpM5oZCrpHipJ-tHjy5dOeklMEQFJT_rmw6U2xPLXuucWV1CjSodOsvs_VqP_seFUdH5okHIQ_66lZd6Paq_6ivlGOWLPFbwBbfNZwz3lRf1jCuCSfjYVv3PezWnfYuexMEsEh077QpzGW3XFVDwv-KeMaqw2aksXiMy-DNJhHRLuytbSIX");'></div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold text-base line-clamp-2">Grilled Salmon &amp; Asparagus</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 25 min
+                            </span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> 550 kcal
+                            </span>
+</div>
+</div>
+</div>
+<button class="absolute top-2 right-2 p-1 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-dashed border-primary/40 bg-primary/5 hover:bg-primary/10 text-primary font-bold text-sm transition-all active:scale-[0.99]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                Add Dinner Item
+            </button>
+</section>
+<!-- Snacks Section (Empty State) -->
+<section class="mt-8 mb-8">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Snacks</h3>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md">0 kcal</span>
+</div>
+<div class="bg-white dark:bg-surface-dark rounded-2xl p-6 shadow-sm mb-3 flex flex-col items-center justify-center text-center">
+<div class="w-12 h-12 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-3 text-slate-400">
+<span class="material-symbols-outlined">no_meals</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">No snacks planned for today.</p>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-[#0e1b12] font-bold text-sm shadow-sm shadow-primary/25 hover:shadow-primary/40 transition-all active:scale-95">
+                    Browse Snacks
+                </button>
+</div>
+</section>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pb-safe pt-2 z-50">
+<div class="flex justify-around items-center px-2 pb-6 pt-2 max-w-md mx-auto">
+<!-- Home -->
+<button class="flex flex-col items-center gap-1 p-2 w-16 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<!-- Scan -->
+<button class="flex flex-col items-center gap-1 p-2 w-16 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">barcode_scanner</span>
+<span class="text-[10px] font-medium">Scan</span>
+</button>
+<!-- Meal Plan (Active) -->
+<button class="flex flex-col items-center gap-1 p-2 w-16 text-primary transition-colors relative">
+<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-b-full"></div>
+<span class="material-symbols-outlined text-2xl fill-current">calendar_month</span>
+<span class="text-[10px] font-bold">Meal Plan</span>
+</button>
+<!-- Recipes -->
+<button class="flex flex-col items-center gap-1 p-2 w-16 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">restaurant_menu</span>
+<span class="text-[10px] font-medium">Recipes</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center gap-1 p-2 w-16 text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 transition-colors group">
+<span class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</div>
+</body></html>

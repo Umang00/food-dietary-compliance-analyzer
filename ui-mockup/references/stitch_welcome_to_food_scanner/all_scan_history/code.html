@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Scan History</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "primary-dark": "#25b054",
+                        "background-light": "#ffffff",
+                        "background-dark": "#112116",
+                        "surface-light": "#f6f8f6",
+                        "surface-dark": "#1a2e22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white overflow-hidden">
+<div class="relative flex h-full w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark min-h-screen overflow-hidden shadow-xl border-x border-slate-100 dark:border-slate-800">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 pb-2 z-10 bg-background-light dark:bg-background-dark sticky top-0">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">All Scan History</h2>
+</header>
+<!-- Search & Filter Section -->
+<div class="px-4 py-2 sticky top-[60px] bg-background-light dark:bg-background-dark z-10 border-b border-slate-100 dark:border-slate-800">
+<!-- Search Bar -->
+<div class="relative mb-4">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-12 bg-surface-light dark:bg-surface-dark transition-all focus-within:ring-2 focus-within:ring-primary/50">
+<div class="text-slate-400 dark:text-slate-500 flex border-none items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl bg-transparent text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none h-full placeholder:text-slate-400 dark:placeholder:text-slate-500 px-3 text-base font-normal leading-normal" placeholder="Search past scans..." value=""/>
+</div>
+</div>
+<!-- Chips -->
+<div class="flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-900 dark:bg-white pl-4 pr-4 transition-transform active:scale-95">
+<span class="text-white dark:text-slate-900 text-sm font-semibold leading-normal">All</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Safe</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-red-500 text-[18px]">cancel</span>
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Unsafe</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-light dark:bg-surface-dark border border-slate-200 dark:border-slate-700 pl-3 pr-4 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-amber-500 text-[18px]">help</span>
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Uncertain</span>
+</button>
+</div>
+</div>
+<!-- Scrollable List Content -->
+<div class="flex-1 overflow-y-auto pb-24 px-4 pt-2">
+<!-- Section: Today -->
+<div class="mb-6">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-3 ml-1">Today</h3>
+<div class="flex flex-col gap-3">
+<!-- Item 1: Safe -->
+<div class="group flex gap-4 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="flex items-start gap-3 w-full">
+<div class="flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-12 text-primary">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight truncate pr-2">Organic Gala Apple</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs whitespace-nowrap">2:30 PM</span>
+</div>
+<p class="text-primary text-sm font-medium leading-normal mt-0.5">Safe for consumption</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal mt-1">Whole Foods Market</p>
+</div>
+<div class="self-center">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Unsafe -->
+<div class="group flex gap-4 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer relative overflow-hidden">
+<!-- Simulated swipe action hint -->
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-red-500 rounded-r-xl"></div>
+<div class="flex items-start gap-3 w-full">
+<div class="flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20 shrink-0 size-12 text-red-500">
+<span class="material-symbols-outlined text-[24px]">cancel</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight truncate pr-2">Spicy Nacho Doritos</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs whitespace-nowrap">11:15 AM</span>
+</div>
+<p class="text-red-500 text-sm font-medium leading-normal mt-0.5">⚠️ Contains: Dairy, MSG</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal mt-1">Found in Pantry</p>
+</div>
+<div class="self-center">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Uncertain -->
+<div class="group flex gap-4 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="flex items-start gap-3 w-full">
+<div class="flex items-center justify-center rounded-full bg-amber-100 dark:bg-amber-900/20 shrink-0 size-12 text-amber-600 dark:text-amber-500">
+<span class="material-symbols-outlined text-[24px]">help</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight truncate pr-2">Mystery Sauce Packet</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs whitespace-nowrap">9:45 AM</span>
+</div>
+<p class="text-amber-600 dark:text-amber-500 text-sm font-medium leading-normal mt-0.5">Unclear ingredients</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal mt-1">Scan incomplete</p>
+</div>
+<div class="self-center">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Yesterday -->
+<div class="mb-6">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-3 ml-1">Yesterday</h3>
+<div class="flex flex-col gap-3">
+<!-- Item 4: Safe -->
+<div class="group flex gap-4 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="flex items-start gap-3 w-full">
+<div class="flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-12 text-primary">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight truncate pr-2">Almond Milk (Unsweetened)</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs whitespace-nowrap">6:20 PM</span>
+</div>
+<p class="text-primary text-sm font-medium leading-normal mt-0.5">Safe for consumption</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal mt-1">Blue Diamond</p>
+</div>
+<div class="self-center">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Item 5: Unsafe -->
+<div class="group flex gap-4 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="flex items-start gap-3 w-full">
+<div class="flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20 shrink-0 size-12 text-red-500">
+<span class="material-symbols-outlined text-[24px]">cancel</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight truncate pr-2">Frozen Cheese Pizza</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs whitespace-nowrap">12:30 PM</span>
+</div>
+<p class="text-red-500 text-sm font-medium leading-normal mt-0.5">⚠️ Contains: Gluten, Dairy</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal mt-1">DiGiorno</p>
+</div>
+<div class="self-center">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section: Last Week -->
+<div class="mb-4">
+<h3 class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider mb-3 ml-1">Last Week</h3>
+<div class="flex flex-col gap-3">
+<!-- Item 6: Safe -->
+<div class="group flex gap-4 bg-white dark:bg-surface-dark p-3 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer opacity-80 hover:opacity-100">
+<div class="flex items-start gap-3 w-full">
+<div class="flex items-center justify-center rounded-full bg-primary/10 shrink-0 size-12 text-primary">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+</div>
+<div class="flex flex-1 flex-col justify-center min-w-0">
+<div class="flex justify-between items-start">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight truncate pr-2">Gluten-Free Oats</p>
+<span class="text-slate-400 dark:text-slate-500 text-xs whitespace-nowrap">Oct 20</span>
+</div>
+<p class="text-primary text-sm font-medium leading-normal mt-0.5">Safe for consumption</p>
+<p class="text-slate-400 dark:text-slate-500 text-xs font-normal mt-1">Bob's Red Mill</p>
+</div>
+<div class="self-center">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation -->
+<div class="absolute bottom-0 w-full bg-background-light dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 pb-6 pt-3 px-4 flex justify-between items-center z-20">
+<button class="flex flex-col items-center gap-1 w-1/3 group">
+<div class="flex items-center justify-center rounded-full bg-primary/10 w-12 h-8 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-[24px]">history</span>
+</div>
+<span class="text-xs font-semibold text-primary">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-1/3 group">
+<div class="flex items-center justify-center w-12 h-8 rounded-full group-hover:bg-slate-100 dark:group-hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-[24px] group-hover:text-slate-600 dark:group-hover:text-slate-300">barcode_scanner</span>
+</div>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300">Scan</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-1/3 group">
+<div class="flex items-center justify-center w-12 h-8 rounded-full group-hover:bg-slate-100 dark:group-hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500 text-[24px] group-hover:text-slate-600 dark:group-hover:text-slate-300">person</span>
+</div>
+<span class="text-xs font-medium text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300">Profile</span>
+</button>
+</div>
+</div>
+</body></html>

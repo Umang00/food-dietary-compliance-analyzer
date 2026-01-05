@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Filter &amp; Sort Recipes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#30e86e",
+                "background-light": "#f6f8f6",
+                "background-dark": "#112116",
+                },
+                fontFamily: {
+                "display": ["Plus Jakarta Sans", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-100 dark:bg-gray-900 font-display flex items-center justify-center min-h-screen p-4">
+<!-- Mobile Device Simulator -->
+<div class="relative w-full max-w-[400px] h-[812px] bg-black rounded-[2.5rem] shadow-2xl overflow-hidden border-[8px] border-black ring-1 ring-gray-700/50">
+<!-- App Content Background (Simulated) -->
+<div class="absolute inset-0 bg-background-light dark:bg-background-dark overflow-hidden">
+<!-- Simulated Navigation Bar -->
+<div class="pt-14 pb-4 px-6 flex justify-between items-center">
+<div>
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white">Discover</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400">Community Recipes</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhNRNZq9hokmL-qJIdjAnJXCQvUgZ8MCBnyuOlHCAwuZcfBllXs7mTFTJL4RnBjkPrQ52HoX-R6ieQelv8vCBkzzJ98I3s2SAYWrOZD0ESmSw-AEK-SAMCu8ejHYaYpXiwrNs9R-VzO9389_U9uyKG1t6uujA71o81mYIgqQoYhSXEWg5Np1eA4Vn5snZzpUZOzIN70eG4S1-_JthEa6xBbDTKqiGR9M6ZVUHr0f8PZA9EJwtZBDYy1lCsP247vmOUQ5lPYHAjRUSO"/>
+</div>
+</div>
+<!-- Simulated Feed -->
+<div aria-hidden="true" class="px-4 space-y-6 opacity-40 pointer-events-none">
+<!-- Recipe Card 1 -->
+<div class="bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-sm">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="Healthy vegetable salad bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe8DYzggovCeLjrDq4w7yAUMSiWApOK1YGfTGfqdSiNevnfiIYxz0-EYhcWgDQEQ2f8VSIRPL37WE47SnvYCDHDC27bNeXnAPoEZUyNaKMHAfKgH0VpmzuOle4xvd-cVrv6a6zVhCVoat6H7eyJR030OJaJyUInYIkFgTRisVmkkR0DdyjhQeCdo3Ko-c45mDLGMBWkSs5uJN9ISgmyczwEIJEEAajPQcdT9BROgSgGPZI_PWoQ-QAyo_1ZM7CK-U00mtgNhYFtm2e"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-bold text-green-700">Vegan</div>
+</div>
+<div class="p-4">
+<div class="h-5 w-3/4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+<div class="flex gap-2">
+<div class="h-3 w-16 bg-gray-100 dark:bg-gray-800 rounded"></div>
+<div class="h-3 w-16 bg-gray-100 dark:bg-gray-800 rounded"></div>
+</div>
+</div>
+</div>
+<!-- Recipe Card 2 -->
+<div class="bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-sm">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover" data-alt="Avocado toast plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMlEMr-3B4Se2RGf9w3DpqgG5XWt2mp9l5c6XFb5Uhz1bjQ4i_lNdSofwEkoP266u8UoTy6OuuWDq1PFJYxNqFl7NWfKQwpaH69s1-MS3B2sQrPDQqV0Lmf9VZpMMjA3577uloZP10Hr5HnqgP7uNwOreqK1Glx9WItE9HLurvH5GK2HSp_dGAgI0fKiDAHWQS_QkeHFLHsECLhYPSBDj-2s8384TZiOXY4RsQSGQlfdFfDDRbQ0oKYFFsJxIPWaFVQTo9n2W1sUu2"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Dimmed Overlay -->
+<div class="absolute inset-0 bg-black/60 backdrop-blur-[2px] z-10"></div>
+<!-- Filter & Sort Bottom Sheet -->
+<!-- Using custom rounded value for sheet top to match mobile OS feel, consistent with modern design -->
+<div class="absolute bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark rounded-t-[32px] z-20 h-[85%] flex flex-col shadow-[0_-8px_30px_rgba(0,0,0,0.12)]">
+<!-- Drag Handle -->
+<div class="w-full flex justify-center pt-3 pb-2 flex-shrink-0">
+<div class="w-12 h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+</div>
+<!-- Sheet Header -->
+<div class="px-6 pb-4 pt-1 flex items-center justify-between flex-shrink-0">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Filter &amp; Sort Recipes</h2>
+<button class="text-sm font-semibold text-green-700 dark:text-primary hover:opacity-75 transition-opacity px-2 py-1">
+                    Reset
+                </button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-6 pt-2 pb-6 no-scrollbar">
+<!-- Section 1: Dietary Path -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons text-primary text-xl">spa</span>
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Dietary Path</h3>
+</div>
+<div class="flex flex-wrap gap-3">
+<!-- Active State -->
+<label class="cursor-pointer group">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<span class="inline-block px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-black peer-checked:border-primary transition-all shadow-sm">
+                                Vegan
+                            </span>
+</label>
+<!-- Inactive State -->
+<label class="cursor-pointer group">
+<input class="peer sr-only" type="checkbox"/>
+<span class="inline-block px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-black peer-checked:border-primary transition-all shadow-sm hover:border-primary/50">
+                                Jain
+                            </span>
+</label>
+<!-- Inactive State -->
+<label class="cursor-pointer group">
+<input class="peer sr-only" type="checkbox"/>
+<span class="inline-block px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 peer-checked:bg-primary peer-checked:text-black peer-checked:border-primary transition-all shadow-sm hover:border-primary/50">
+                                Vegetarian
+                            </span>
+</label>
+</div>
+</div>
+<!-- Section 2: Meal Type -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons text-primary text-xl">restaurant</span>
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Meal Type</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="p-3.5 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 peer-checked:bg-primary/10 peer-checked:border-primary flex items-center justify-between transition-all">
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-gray-900 dark:peer-checked:text-white">Breakfast</span>
+<span class="material-icons text-primary text-lg opacity-0 peer-checked:opacity-100 transition-opacity">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" type="checkbox"/>
+<div class="p-3.5 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 peer-checked:bg-primary/10 peer-checked:border-primary flex items-center justify-between transition-all">
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-gray-900 dark:peer-checked:text-white">Lunch</span>
+<span class="material-icons text-primary text-lg opacity-0 peer-checked:opacity-100 transition-opacity">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" type="checkbox"/>
+<div class="p-3.5 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 peer-checked:bg-primary/10 peer-checked:border-primary flex items-center justify-between transition-all">
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-gray-900 dark:peer-checked:text-white">Dinner</span>
+<span class="material-icons text-primary text-lg opacity-0 peer-checked:opacity-100 transition-opacity">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" type="checkbox"/>
+<div class="p-3.5 rounded-xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 peer-checked:bg-primary/10 peer-checked:border-primary flex items-center justify-between transition-all">
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-gray-900 dark:peer-checked:text-white">Snack</span>
+<span class="material-icons text-primary text-lg opacity-0 peer-checked:opacity-100 transition-opacity">check_circle</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Section 3: Sort By -->
+<div class="mb-4">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-icons text-primary text-xl">sort</span>
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Sort By</h3>
+</div>
+<div class="bg-white dark:bg-white/5 border border-gray-100 dark:border-white/5 rounded-xl p-1 shadow-sm">
+<!-- Option 1 -->
+<label class="flex items-center justify-between p-3.5 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-icons text-base text-green-900 dark:text-primary">schedule</span>
+</div>
+<span class="text-sm font-semibold text-gray-900 dark:text-white">Newest First</span>
+</div>
+<input checked="" class="w-5 h-5 text-primary border-gray-300 focus:ring-primary focus:ring-offset-0 bg-gray-100 dark:bg-gray-700" name="sort" type="radio"/>
+</label>
+<div class="h-px bg-gray-100 dark:bg-white/10 mx-3"></div>
+<!-- Option 2 -->
+<label class="flex items-center justify-between p-3.5 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center">
+<span class="material-icons text-base text-gray-400 dark:text-gray-500">history</span>
+</div>
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Oldest First</span>
+</div>
+<input class="w-5 h-5 text-primary border-gray-300 focus:ring-primary focus:ring-offset-0 bg-gray-100 dark:bg-gray-700" name="sort" type="radio"/>
+</label>
+<div class="h-px bg-gray-100 dark:bg-white/10 mx-3"></div>
+<!-- Option 3 -->
+<label class="flex items-center justify-between p-3.5 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center">
+<span class="material-icons text-base text-gray-400 dark:text-gray-500">hourglass_bottom</span>
+</div>
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Cooking Time (shortest)</span>
+</div>
+<input class="w-5 h-5 text-primary border-gray-300 focus:ring-primary focus:ring-offset-0 bg-gray-100 dark:bg-gray-700" name="sort" type="radio"/>
+</label>
+<div class="h-px bg-gray-100 dark:bg-white/10 mx-3"></div>
+<!-- Option 4 -->
+<label class="flex items-center justify-between p-3.5 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center">
+<span class="material-icons text-base text-gray-400 dark:text-gray-500">hourglass_top</span>
+</div>
+<span class="text-sm font-medium text-gray-600 dark:text-gray-300">Cooking Time (longest)</span>
+</div>
+<input class="w-5 h-5 text-primary border-gray-300 focus:ring-primary focus:ring-offset-0 bg-gray-100 dark:bg-gray-700" name="sort" type="radio"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="p-6 pt-4 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-white/5 flex gap-4 flex-shrink-0">
+<button class="flex-1 py-4 px-4 rounded-xl text-sm font-bold text-gray-600 dark:text-gray-300 bg-transparent border border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+                    Cancel
+                </button>
+<button class="flex-[2] py-4 px-4 rounded-xl text-sm font-bold bg-primary text-black shadow-[0_4px_20px_rgba(48,232,110,0.3)] hover:shadow-[0_4px_25px_rgba(48,232,110,0.4)] transition-all flex justify-center items-center gap-2">
+                    Apply Filters
+                </button>
+</div>
+</div>
+</div>
+</body></html>

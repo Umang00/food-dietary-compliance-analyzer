@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile - Food Scanner</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#22c55e", // Fresh Green
+                        "primary-dark": "#15803d", // Darker green for text
+                        "background-light": "#f8fafc", // Cool white/slate
+                        "background-dark": "#112116",
+                        "surface-dark": "#1c2e24", 
+                        "surface-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-white h-screen flex flex-col overflow-hidden select-none">
+<header class="flex items-center justify-center p-4 pt-12 pb-4 bg-background-light dark:bg-background-dark z-20 sticky top-0">
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Profile</h1>
+</header>
+<main class="flex-1 overflow-y-auto no-scrollbar pb-32">
+<section class="flex flex-col items-center pt-2 pb-8 px-6">
+<div class="relative mb-5 group cursor-pointer">
+<div class="h-28 w-28 rounded-full bg-cover bg-center border-[3px] border-white shadow-soft" data-alt="Portrait of a smiling young man" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBviSwLqY8drVi3h1GJyOtveTKj2YPt6PTykTbMcNCBqlH1xMd6bKlapvCe7JhAz6C9MZk1BcgdYq8IPbeqnF2M0K0JUjU3patqHHeufXDMaz7CL2Bosy-2Bdm8WyFaWu9KAPKKY60CgTCcJ7IuYv5K1FkPD-SNlNHqpJ-nZEgbrvEWtcMbW5znalf5LXddxyay7jBANtNq00QQMKniD9ajOm92juDpiHpbtapZAKuYdr4zj17cKv3c3zE0-FL8sucq_SBgOWtFNRjh');">
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full border-2 border-white shadow-sm flex items-center justify-center transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[16px] font-bold">edit</span>
+</div>
+</div>
+<h2 class="text-2xl font-extrabold mb-1 text-slate-900 dark:text-white">Alex Johnson</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">alex.j@example.com</p>
+<div class="bg-green-50 dark:bg-green-900/20 border border-green-100 dark:border-green-800 px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-dark dark:text-primary text-sm">spa</span>
+<span class="text-primary-dark dark:text-primary font-bold text-sm tracking-wide">Jain Diet</span>
+</div>
+</section>
+<section class="px-5 mb-8">
+<div class="flex items-center gap-2 mb-4 px-1">
+<span class="material-symbols-outlined text-primary">bar_chart</span>
+<h3 class="font-bold text-lg text-slate-800 dark:text-white">Your Activity</h3>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar">
+<div class="flex-1 min-w-[110px] bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-soft border border-slate-100 dark:border-white/5 flex flex-col items-center justify-center gap-1">
+<span class="text-3xl font-extrabold text-primary">124</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wide">Total Scans</span>
+</div>
+<div class="flex-1 min-w-[110px] bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-soft border border-slate-100 dark:border-white/5 flex flex-col items-center justify-center gap-1">
+<span class="text-3xl font-extrabold text-slate-800 dark:text-white">12</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wide">This Month</span>
+</div>
+<div class="flex-1 min-w-[110px] bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-soft border border-slate-100 dark:border-white/5 flex flex-col items-center justify-center gap-1">
+<span class="text-3xl font-extrabold text-primary">98</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wide">Safe Products</span>
+</div>
+</div>
+</section>
+<section class="px-5 mb-6">
+<h3 class="font-bold text-lg mb-3 px-1 flex items-center gap-2 text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-slate-400">settings</span> Account
+        </h3>
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-slate-100 dark:border-white/5">
+<button class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-blue-50 flex items-center justify-center text-blue-500">
+<span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Dietary Preferences</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Email &amp; Password</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-red-50 flex items-center justify-center text-red-500">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</div>
+<span class="font-semibold text-[15px] text-red-500">Delete Account</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-red-500 transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<section class="px-5 mb-6">
+<h3 class="font-bold text-lg mb-3 px-1 flex items-center gap-2 text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-slate-400">lock</span> Privacy &amp; Data
+        </h3>
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-slate-100 dark:border-white/5">
+<button class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-purple-50 flex items-center justify-center text-purple-500">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Download My Data</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Delete Scan History</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-green-50 flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined text-[20px]">policy</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">launch</span>
+</button>
+</div>
+</section>
+<section class="px-5 mb-6">
+<h3 class="font-bold text-lg mb-3 px-1 flex items-center gap-2 text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-slate-400">handyman</span> Settings
+        </h3>
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-slate-100 dark:border-white/5">
+<div class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-yellow-50 flex items-center justify-center text-yellow-500">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Notifications</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<button class="w-full flex items-center justify-between p-4 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-teal-50 flex items-center justify-center text-teal-500">
+<span class="material-symbols-outlined text-[20px]">rule</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Permissions</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<section class="px-5 mb-8">
+<h3 class="font-bold text-lg mb-3 px-1 flex items-center gap-2 text-slate-800 dark:text-white">
+<span class="material-symbols-outlined text-slate-400">chat_bubble</span> Support
+        </h3>
+<div class="bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-soft border border-slate-100 dark:border-white/5">
+<button class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Contact Us</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 border-b border-slate-50 dark:border-white/5 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-rose-50 flex items-center justify-center text-rose-500">
+<span class="material-symbols-outlined text-[20px]">bug_report</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">Report a Bug</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 active:bg-slate-50 dark:active:bg-white/5 transition-colors group">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-500">
+<span class="material-symbols-outlined text-[20px]">help</span>
+</div>
+<span class="font-semibold text-[15px] text-slate-700 dark:text-slate-200">FAQs</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</section>
+<div class="px-5 pb-12">
+<button class="w-full py-4 rounded-xl bg-white dark:bg-surface-dark border border-red-100 dark:border-red-900/30 text-red-500 font-bold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-sm shadow-red-100 dark:shadow-none hover:bg-red-50/50">
+<span class="material-symbols-outlined">logout</span>
+            Log Out
+        </button>
+<p class="text-center text-xs text-slate-400 mt-5 font-medium">Version 2.4.1 (Build 204)</p>
+</div>
+</main>
+<nav class="fixed bottom-0 w-full bg-white/95 dark:bg-[#111813]/95 backdrop-blur-xl border-t border-slate-200 dark:border-white/5 pb-5 pt-3 px-6 z-50">
+<div class="flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-2xl">history</span>
+<span class="text-[10px] font-bold text-slate-400 group-hover:text-primary transition-colors">History</span>
+</button>
+<button class="relative -top-6 bg-primary text-white h-16 w-16 rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(34,197,94,0.4)] hover:scale-105 active:scale-95 transition-all border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-3xl">barcode_scanner</span>
+</button>
+<button class="flex flex-col items-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-primary text-2xl font-filled">person</span>
+<span class="text-[10px] font-bold text-primary">Profile</span>
+</button>
+</div>
+</nav>
+<style>.font-filled {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+</body></html>

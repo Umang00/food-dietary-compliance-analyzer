@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camera: Choose Scan Mode</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "primary-dark": "#25b556",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-dark": "#1c2b21",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-200 font-display flex items-center justify-center min-h-screen py-8">
+<div class="relative w-full max-w-[400px] h-[850px] bg-black overflow-hidden shadow-2xl rounded-[40px] border-8 border-gray-900 group/design-root">
+<div class="absolute inset-0 z-0">
+<img alt="Camera Feed" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp6Yd7W5OnRCw-t3Ny7Tp1JxoeAt-rdidpXJPoUx84ZkfBqmIc8aqCcQ0Bfonm2Cvv4WrFWKmaTjq-66BtdselyuY7Va5LoBNlbyrA_rO6Qy73O8BO4XVQ3Xc1rvsJ-sDmOdUHgrQf3KR-bx774_E6rNoqz1qW2r64HLCK0Un7MXfBkwNoiPhNojqfmOg7NjTAeV8VdydgVSKYbHc1GdYlqatm-9rRD1Ai7q7Yw909p8p8ihtQLkMJ6FNLlH-rImduhxE3x_OijoC0"/>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="absolute top-0 w-full h-12 flex justify-between items-center px-6 z-20 text-white">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
+</div>
+</div>
+<div class="absolute top-12 left-0 right-0 px-6 py-4 z-20 flex justify-between items-center">
+<button class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white hover:bg-black/60 transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">flash_off</span>
+</button>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10">
+<div class="mb-8 text-center px-8">
+<p class="text-white text-shadow-sm font-semibold text-lg tracking-wide drop-shadow-md">Scan a barcode</p>
+<p class="text-white/80 text-sm mt-1 drop-shadow-md">Place the barcode inside the frame</p>
+</div>
+<div class="relative w-64 h-40 border-2 border-white/50 rounded-2xl overflow-hidden shadow-[0_0_0_9999px_rgba(0,0,0,0.5)]">
+<div class="absolute top-0 left-0 w-6 h-6 border-t-4 border-l-4 border-primary rounded-tl-lg"></div>
+<div class="absolute top-0 right-0 w-6 h-6 border-t-4 border-r-4 border-primary rounded-tr-lg"></div>
+<div class="absolute bottom-0 left-0 w-6 h-6 border-b-4 border-l-4 border-primary rounded-bl-lg"></div>
+<div class="absolute bottom-0 right-0 w-6 h-6 border-b-4 border-r-4 border-primary rounded-br-lg"></div>
+<div class="absolute top-0 left-0 w-full h-0.5 bg-primary/80 shadow-[0_0_10px_rgba(48,232,110,0.8)] animate-[scan_2s_ease-in-out_infinite]" style="animation: scan 2s ease-in-out infinite;"></div>
+<style>
+                    @keyframes scan {
+                        0% { top: 10%; opacity: 0; }
+                        10% { opacity: 1; }
+                        90% { opacity: 1; }
+                        100% { top: 90%; opacity: 0; }
+                    }
+                </style>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12 pb-8">
+<div class="flex justify-center mb-8 px-6">
+<div class="flex bg-black/60 backdrop-blur-md rounded-full p-1 border border-white/10 relative">
+<div class="absolute left-1 top-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-white rounded-full transition-all duration-300"></div>
+<button class="relative z-10 px-5 py-2.5 rounded-full text-sm font-bold text-black transition-colors min-w-[130px] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">barcode_scanner</span>
+                        Barcode
+                    </button>
+<button class="relative z-10 px-5 py-2.5 rounded-full text-sm font-bold text-white/80 hover:text-white transition-colors min-w-[130px] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">text_snippet</span>
+                        Ingredients
+                    </button>
+</div>
+</div>
+<div class="flex items-center justify-around px-8 pb-4">
+<button class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 overflow-hidden flex items-center justify-center group">
+<img alt="Gallery" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEJisRmI7GtXSlZnPIK3HKAUNegtpT4sxovzaHU-lm5o6Rzd6ofIKCJymj5VsTzxgOMMegT3ABtuUr5a-arANqzdpgRkEit_E_2BlX5VysaoY6vmrbWXiXix-SlFmHf5Vw69fCGmSfV4WbqMli6R_M8n1dEJU-SBUaSLnm2Yq8xxQNbqwGFcTlyljGbft9SbXBYjE_ThoPFdMUZnx8nTQUPsfpvIMPXGLj-1ZV2M-48pGrm5tK-_hpsif16SDJbsoeihKrjUJ5fvAH"/>
+</button>
+<button class="w-20 h-20 rounded-full border-4 border-white flex items-center justify-center bg-transparent relative group active:scale-95 transition-transform">
+<div class="w-[66px] h-[66px] rounded-full bg-white group-active:bg-gray-200 transition-colors"></div>
+</button>
+<button class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">keyboard</span>
+</button>
+</div>
+<div class="h-2 w-full"></div>
+</div>
+</div>
+
+</body></html>

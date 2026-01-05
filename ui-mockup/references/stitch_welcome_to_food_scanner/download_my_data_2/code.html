@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Download Data Confirmation</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e", 
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-[#111813] dark:text-white flex justify-center min-h-screen">
+<div class="relative flex flex-col h-full min-h-screen w-full max-w-md bg-white dark:bg-[#1a2c20] shadow-xl overflow-hidden">
+<main class="flex-1 flex flex-col items-center justify-center px-8 text-center pb-12">
+<div class="relative flex items-center justify-center w-32 h-32 rounded-full bg-primary/10 mb-8">
+<span class="material-symbols-outlined text-primary" style="font-size: 64px;">mark_email_read</span>
+</div>
+<h1 class="text-3xl font-extrabold text-[#111813] dark:text-white mb-4 tracking-tight">Request Sent!</h1>
+<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+            A link to download your data has been generated and sent to your registered email address.
+        </p>
+<div class="bg-gray-50 dark:bg-[#233629] p-4 rounded-xl w-full">
+<p class="text-sm text-gray-500 dark:text-gray-400">
+                Please check your inbox and spam folder. The link will remain valid for 24 hours.
+            </p>
+</div>
+</main>
+<div class="p-6 pb-8 bg-white dark:bg-[#1a2c20]">
+<button class="w-full bg-primary hover:bg-[#25d360] active:scale-[0.98] transition-all text-[#0b2212] font-bold text-lg h-14 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+            Done
+        </button>
+</div>
+</div>
+
+</body></html>

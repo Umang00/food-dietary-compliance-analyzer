@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Inter%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Food Scanner - Welcome</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-green: #34D399;--primary-dark: #064E3B;--accent-blue: #E0F2FE;--surface-gray: #F9FAFB;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body>
+<div class="relative flex h-full min-h-screen w-full flex-col bg-[var(--surface-gray)] justify-between group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="flex flex-col flex-grow">
+<div class="flex flex-col gap-3 px-6 pt-8 pb-2">
+<div class="rounded-full bg-gray-200 h-1.5 w-full">
+<div class="h-1.5 rounded-full bg-[var(--primary-green)]" style="width: 25%;"></div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center pt-8 pb-4">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[var(--primary-green)] text-3xl">qr_code_scanner</span>
+<h2 class="text-slate-900 tracking-tight text-2xl font-bold leading-tight">Food Scanner</h2>
+</div>
+<h1 class="text-slate-600 text-lg font-medium text-center">Eat with Confidence</h1>
+</div>
+<div class="flex w-full px-6 py-4 justify-center">
+<div class="w-full max-w-sm aspect-[4/5] overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 p-2 relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[var(--accent-blue)] rounded-full blur-2xl opacity-60 z-0"></div>
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl relative z-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoF-P670OUxxb_qflz0daqh199pPUF9bm9bwSVXRNh3CWKR57BXZfrhnkQBTheg6EWQHTV2WAFA6Z40YBi5Yj1L0gNkfbM2jPmc-anrPwW8zcLWVVX7bV04mzf7do4OO1rND0cRG0uAdoutkMxFvCGKMlGrGEJW8BMLg-G2tjP7LB2SlO35-sU4HnZ_aorTCZvc_jVQ7LJRdh0VL-hpj0oaBWNd8wC1qAwOZ4AchFcCblU5rtqqX-2ftLldnGbsMKlueuAXcxt-ACk");'></div>
+</div>
+</div>
+<div class="px-8 py-4 flex flex-col gap-6">
+<p class="text-slate-500 text-base font-normal leading-relaxed text-center">
+            Scan any food item instantly to verify if it aligns with your dietary needs and allergies.
+          </p>
+<div class="flex justify-between items-start gap-2">
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-[var(--primary-dark)] font-bold text-sm border border-green-100">1</div>
+<span class="text-xs text-slate-500 font-medium text-center">Scan</span>
+</div>
+<div class="h-[1px] bg-gray-200 flex-1 mt-5"></div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-[var(--primary-dark)] font-bold text-sm border border-green-100">2</div>
+<span class="text-xs text-slate-500 font-medium text-center">Check</span>
+</div>
+<div class="h-[1px] bg-gray-200 flex-1 mt-5"></div>
+<div class="flex flex-col items-center gap-2 flex-1">
+<div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-[var(--primary-dark)] font-bold text-sm border border-green-100">3</div>
+<span class="text-xs text-slate-500 font-medium text-center">Eat</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-8 pt-4 px-6 bg-[var(--surface-gray)]">
+<button class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-full h-14 bg-[var(--primary-green)] text-white text-base font-semibold leading-normal tracking-wide shadow-md shadow-green-200 hover:bg-emerald-400 transition-colors">
+<span class="truncate">Get Started</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+
+</body></html>

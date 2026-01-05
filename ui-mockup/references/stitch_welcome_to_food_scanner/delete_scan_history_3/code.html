@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Delete Scan History</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-red": "#E11D48", 
+                        "brand-red-dark": "#BE123C", 
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#0F172A",
+                        "text-primary": "#0F172A",
+                        "text-secondary": "#64748B",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'glow-red': '0 4px 20px -2px rgba(225, 29, 72, 0.25)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }#confirm-check:checked ~ label .checkbox-box {
+            background-color: #E11D48;
+            border-color: #E11D48;
+        }
+        #confirm-check:checked ~ label .checkbox-icon {
+            opacity: 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-light dark:bg-surface-dark text-text-primary dark:text-white h-screen overflow-hidden">
+<div class="relative flex h-full w-full max-w-md mx-auto flex-col bg-surface-light dark:bg-surface-dark overflow-y-auto no-scrollbar">
+<div class="sticky top-0 z-30 flex items-center justify-between px-4 py-3 bg-surface-light/90 dark:bg-surface-dark/90 backdrop-blur-md">
+<button class="size-10 flex items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-white/10 transition-colors text-slate-800 dark:text-white">
+<span class="material-symbols-outlined font-medium">arrow_back</span>
+</button>
+<h1 class="text-base font-bold tracking-tight text-slate-900 dark:text-white">Delete Scan History</h1>
+<div class="size-10"></div>
+</div>
+<main class="flex-1 px-6 pt-6 pb-40 flex flex-col gap-8">
+<div class="flex flex-col items-center text-center mt-2">
+<div class="relative mb-6">
+<div class="absolute inset-0 bg-red-500/20 blur-2xl rounded-full scale-125"></div>
+<div class="relative bg-red-50 dark:bg-red-900/20 size-24 rounded-3xl flex items-center justify-center border border-red-100 dark:border-red-900/50 shadow-sm">
+<span class="material-symbols-outlined text-brand-red text-[48px]">delete_forever</span>
+</div>
+</div>
+<h2 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-3 tracking-tight">
+                Irreversible Action
+            </h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-[280px] mx-auto">
+                This action will permanently remove all your past scan results from your account. This cannot be undone.
+            </p>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 ml-1">
+                    Filter by Date
+                </label>
+<div class="relative group">
+<select class="w-full h-14 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 pl-12 text-base font-medium text-slate-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all shadow-sm cursor-pointer">
+<option selected="" value="all">Delete All History</option>
+<option value="1_month">Older than 1 Month</option>
+<option value="3_months">Older than 3 Months</option>
+<option value="6_months">Older than 6 Months</option>
+<option value="1_year">Older than 1 Year</option>
+</select>
+<div class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-brand-red flex items-center">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</div>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500 flex items-center">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 rounded-xl p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-400 shrink-0 mt-0.5 text-[20px]">info</span>
+<p class="text-sm text-slate-600 dark:text-slate-300 leading-snug">
+                    You are selecting to remove <strong class="text-slate-900 dark:text-white">all records</strong>. Your allergy preferences and other data will be preserved.
+                </p>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 w-full max-w-md mx-auto bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 p-6 pb-8 z-20">
+<input autocomplete="off" class="peer sr-only" id="confirm-check" type="checkbox"/>
+<label class="flex items-start gap-3 mb-6 cursor-pointer group select-none" for="confirm-check">
+<div class="checkbox-box relative flex items-center justify-center size-5 mt-0.5 rounded border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 transition-all group-hover:border-slate-400 dark:group-hover:border-slate-500 shrink-0">
+<span class="checkbox-icon material-symbols-outlined text-white text-[14px] font-bold opacity-0 transition-opacity duration-200">check</span>
+</div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-300 group-hover:text-slate-900 dark:group-hover:text-white transition-colors leading-snug">
+                I understand this action is irreversible.
+            </span>
+</label>
+<button class="w-full h-14 rounded-xl font-bold text-lg shadow-sm flex items-center justify-center gap-2 transition-all duration-300 bg-slate-200 text-slate-400 cursor-not-allowed peer-checked:bg-brand-red peer-checked:text-white peer-checked:shadow-glow-red peer-checked:cursor-pointer peer-checked:hover:bg-brand-red-dark peer-checked:active:scale-[0.98]">
+<span class="material-symbols-outlined">delete</span>
+            Confirm Deletion
+        </button>
+</div>
+</div>
+
+</body></html>

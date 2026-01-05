@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add to Meal Plan</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "primary-dark": "#25b556",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2c20",
+                        "text-main": "#0e1b12",
+                        "text-sub": "#4e9767",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 15px rgba(48, 232, 110, 0.3)'
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for horizontal lists */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen font-display antialiased selection:bg-primary selection:text-background-dark">
+<!-- Phone Simulator Container -->
+<div class="relative w-full max-w-md h-[850px] bg-white overflow-hidden shadow-2xl rounded-[3rem] border-[8px] border-gray-900">
+<!-- Background App Content (Simulated blurred background) -->
+<div aria-hidden="true" class="absolute inset-0 bg-[#eefcf3] flex flex-col pt-12 px-6 opacity-30 pointer-events-none">
+<div class="h-8 w-8 bg-gray-300 rounded-full mb-6"></div>
+<div class="h-8 w-3/4 bg-gray-300 rounded-lg mb-4"></div>
+<div class="h-40 w-full bg-gray-200 rounded-2xl mb-4"></div>
+<div class="flex gap-4">
+<div class="h-32 w-1/2 bg-gray-200 rounded-xl"></div>
+<div class="h-32 w-1/2 bg-gray-200 rounded-xl"></div>
+</div>
+</div>
+<!-- Dark Overlay -->
+<div class="absolute inset-0 bg-[#0e1b12]/60 z-10 glass-effect transition-opacity duration-300"></div>
+<!-- Bottom Sheet Modal -->
+<div class="absolute bottom-0 left-0 right-0 z-20 flex flex-col max-h-[90%] h-auto rounded-t-3xl bg-surface-light dark:bg-surface-dark shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)] transition-transform duration-300 ease-out translate-y-0">
+<!-- Handle -->
+<div class="w-full flex justify-center pt-4 pb-2 cursor-grab active:cursor-grabbing">
+<div class="h-1.5 w-12 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<!-- Header -->
+<div class="px-6 pb-4 pt-1 flex items-center justify-between">
+<h2 class="text-text-main dark:text-white text-2xl font-bold tracking-tight">Add to Meal Plan</h2>
+<!-- Close Button -->
+<button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar px-6 pb-32">
+<!-- Recipe Highlight Card -->
+<div class="bg-background-light dark:bg-background-dark/50 p-4 rounded-2xl border border-gray-100 dark:border-gray-800 mb-8 flex gap-4 items-center">
+<div class="w-20 h-20 rounded-xl bg-center bg-cover bg-no-repeat shadow-sm shrink-0" data-alt="Close up of a bowl of yellow lentil soup with herbs" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCASEaubtx1or040_Vccd6jOFSYtr1wXQDPKHxIL1eSgFLp2MXKOO0oQz4HLLwSJS38EP79UXxxx5oVR_I_rNpUXF4R5ZG4U_MXusp9uda5P49pVp1RXGc6T2nQiIENPj7K_D-OJAB8cHWdofFN0yxEhrqgSYm2ZznPvDDCE9wD2Zflyv_A2xFa9iv0nruwPD7ZnVWwxbBOVLFXjRMZVtHdSFnKgw3jmrGOI14PrNU9j6VhO0kgXxLo_TswUjuBwBfdOTdUGZ8-LHSi');"></div>
+<div class="flex flex-col justify-center gap-1">
+<h3 class="text-text-main dark:text-white text-lg font-bold leading-tight">Jain Lentil Soup</h3>
+<div class="flex items-center gap-2 text-text-sub text-sm font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">local_fire_department</span> 450 kcal</span>
+<span class="text-gray-300 dark:text-gray-600">•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> 20 mins</span>
+</div>
+</div>
+</div>
+<!-- Section: Select Meal -->
+<div class="mb-8">
+<h3 class="text-text-main dark:text-white text-base font-bold mb-4 px-1">Select Meal</h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Option: Breakfast -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="meal_type" type="radio"/>
+<div class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark transition-all duration-200 peer-checked:bg-primary/10 peer-checked:border-primary peer-checked:shadow-[0_0_0_1px_#30e86e]">
+<div class="w-10 h-10 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-400 peer-checked:text-primary-dark transition-colors">
+<span class="material-symbols-outlined">bakery_dining</span>
+</div>
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-text-main">Breakfast</span>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600 peer-checked:border-primary peer-checked:bg-primary"></div>
+</div>
+</label>
+<!-- Option: Lunch -->
+<label class="cursor-pointer group relative">
+<input checked="" class="peer sr-only" name="meal_type" type="radio"/>
+<div class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark transition-all duration-200 peer-checked:bg-primary/10 peer-checked:border-primary peer-checked:shadow-[0_0_0_1px_#30e86e]">
+<div class="w-10 h-10 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-400 peer-checked:text-primary-dark transition-colors">
+<span class="material-symbols-outlined">lunch_dining</span>
+</div>
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-text-main">Lunch</span>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary">
+<span class="material-symbols-outlined text-[10px] text-background-dark">check</span>
+</div>
+</div>
+</label>
+<!-- Option: Dinner -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="meal_type" type="radio"/>
+<div class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark transition-all duration-200 peer-checked:bg-primary/10 peer-checked:border-primary peer-checked:shadow-[0_0_0_1px_#30e86e]">
+<div class="w-10 h-10 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-400 peer-checked:text-primary-dark transition-colors">
+<span class="material-symbols-outlined">dinner_dining</span>
+</div>
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-text-main">Dinner</span>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600 peer-checked:border-primary peer-checked:bg-primary"></div>
+</div>
+</label>
+<!-- Option: Snack -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="meal_type" type="radio"/>
+<div class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-surface-dark transition-all duration-200 peer-checked:bg-primary/10 peer-checked:border-primary peer-checked:shadow-[0_0_0_1px_#30e86e]">
+<div class="w-10 h-10 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-400 peer-checked:text-primary-dark transition-colors">
+<span class="material-symbols-outlined">cookie</span>
+</div>
+<span class="text-sm font-semibold text-gray-700 dark:text-gray-200 peer-checked:text-text-main">Snack</span>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border border-gray-300 dark:border-gray-600 peer-checked:border-primary peer-checked:bg-primary"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Section: Select Day -->
+<div class="mb-4">
+<h3 class="text-text-main dark:text-white text-base font-bold mb-4 px-1">Select Day</h3>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2 -mx-6 px-6 scroll-smooth">
+<!-- Day Item: Today (Active) -->
+<button class="group flex flex-col items-center justify-center min-w-[64px] h-[84px] rounded-2xl bg-primary shadow-glow ring-2 ring-primary ring-offset-2 ring-offset-white dark:ring-offset-surface-dark transition-all">
+<span class="text-background-dark text-xs font-semibold mb-1 opacity-70">WED</span>
+<span class="text-background-dark text-xl font-extrabold">12</span>
+<div class="w-1 h-1 rounded-full bg-background-dark mt-1"></div>
+</button>
+<!-- Day Item: Tomorrow -->
+<button class="group flex flex-col items-center justify-center min-w-[64px] h-[84px] rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-500 hover:border-primary hover:text-primary transition-all">
+<span class="text-xs font-semibold mb-1">THU</span>
+<span class="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary">13</span>
+</button>
+<!-- Day Item -->
+<button class="group flex flex-col items-center justify-center min-w-[64px] h-[84px] rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-500 hover:border-primary hover:text-primary transition-all">
+<span class="text-xs font-semibold mb-1">FRI</span>
+<span class="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary">14</span>
+</button>
+<!-- Day Item -->
+<button class="group flex flex-col items-center justify-center min-w-[64px] h-[84px] rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-500 hover:border-primary hover:text-primary transition-all">
+<span class="text-xs font-semibold mb-1">SAT</span>
+<span class="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary">15</span>
+</button>
+<!-- Day Item -->
+<button class="group flex flex-col items-center justify-center min-w-[64px] h-[84px] rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-500 hover:border-primary hover:text-primary transition-all">
+<span class="text-xs font-semibold mb-1">SUN</span>
+<span class="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary">16</span>
+</button>
+<!-- Day Item -->
+<button class="group flex flex-col items-center justify-center min-w-[64px] h-[84px] rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-200 dark:border-gray-700 text-gray-500 hover:border-primary hover:text-primary transition-all">
+<span class="text-xs font-semibold mb-1">MON</span>
+<span class="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary">17</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Actions -->
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-surface-light dark:bg-surface-dark border-t border-gray-100 dark:border-gray-800 rounded-b-3xl">
+<div class="flex flex-col gap-3">
+<button class="w-full h-14 bg-primary hover:bg-primary-dark text-background-dark text-lg font-bold rounded-xl flex items-center justify-center gap-2 transition-colors shadow-soft">
+<span class="material-symbols-outlined">add_circle</span>
+                        Add Recipe to Plan
+                    </button>
+<button class="w-full h-12 bg-transparent text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-base font-semibold rounded-xl transition-colors">
+                        Cancel
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

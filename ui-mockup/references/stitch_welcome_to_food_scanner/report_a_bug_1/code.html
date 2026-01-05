@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Report a Bug</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar hiding for clean mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-50 flex justify-center min-h-screen">
+<!-- Mobile Screen Container -->
+<div class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col bg-white dark:bg-background-dark shadow-2xl overflow-hidden group/design-root">
+<!-- Top App Bar -->
+<div class="flex items-center justify-between bg-white dark:bg-background-dark px-4 py-3 sticky top-0 z-20 border-b border-slate-100 dark:border-slate-800">
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-900 dark:text-white group">
+<span class="material-symbols-outlined group-hover:-translate-x-0.5 transition-transform">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Report a Bug</h2>
+</div>
+<!-- Scrollable Form Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-32">
+<!-- Header Spacer -->
+<div class="h-4"></div>
+<!-- Description Field -->
+<div class="px-5 py-2">
+<label class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-200 text-base font-bold leading-normal">Description</p>
+<textarea class="form-textarea w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#1a2e22] text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary placeholder:text-slate-400 min-h-[140px] resize-none p-4 text-base font-medium transition-all" placeholder="Please describe the bug you encountered..."></textarea>
+</label>
+</div>
+<!-- Steps to Reproduce -->
+<div class="px-5 py-2">
+<label class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-200 text-base font-bold leading-normal">Steps to Reproduce</p>
+<textarea class="form-textarea w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#1a2e22] text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary placeholder:text-slate-400 min-h-[100px] resize-none p-4 text-base font-medium transition-all" placeholder="1. Opened scanner...
+2. Scanned a product..."></textarea>
+</label>
+</div>
+<!-- Expected & Actual Behavior -->
+<div class="px-5 py-2 grid grid-cols-1 gap-4">
+<label class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-200 text-base font-bold leading-normal">Expected Behavior <span class="text-slate-400 font-normal text-sm ml-1">(Optional)</span></p>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#1a2e22] text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary h-14 placeholder:text-slate-400 px-4 text-base font-medium transition-all" placeholder="I expected to see..." type="text"/>
+</label>
+<label class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-slate-200 text-base font-bold leading-normal">Actual Behavior <span class="text-slate-400 font-normal text-sm ml-1">(Optional)</span></p>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#1a2e22] text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary h-14 placeholder:text-slate-400 px-4 text-base font-medium transition-all" placeholder="Instead, I saw..." type="text"/>
+</label>
+</div>
+<!-- Attach Screenshot -->
+<div class="px-5 py-4">
+<p class="text-slate-900 dark:text-slate-200 text-base font-bold leading-normal mb-2">Attachments</p>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<!-- Upload Button -->
+<button class="flex flex-col shrink-0 items-center justify-center w-28 h-28 border-2 border-dashed border-slate-300 dark:border-slate-600 rounded-xl bg-slate-50 dark:bg-[#1a2e22] hover:bg-slate-100 dark:hover:bg-[#233b2d] hover:border-primary/50 transition-all group">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary mb-1 transition-colors">add_a_photo</span>
+<span class="text-xs font-semibold text-slate-500 dark:text-slate-400 group-hover:text-primary transition-colors">Add Image</span>
+</button>
+<!-- Example of an added image (placeholder state) -->
+<!-- In a real app, this would appear after upload -->
+</div>
+</div>
+<div class="h-6"></div>
+</div>
+<!-- Sticky Footer -->
+<div class="absolute bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md p-5 border-t border-slate-100 dark:border-slate-800 z-30 flex flex-col gap-3">
+<button class="w-full h-14 bg-primary hover:bg-[#28d660] active:scale-[0.98] rounded-full text-[#112116] text-lg font-bold transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2">
+<span>Submit Report</span>
+<span class="material-symbols-outlined text-xl">send</span>
+</button>
+<button class="w-full h-10 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-800 rounded-full text-slate-500 dark:text-slate-400 text-base font-bold transition-all">
+                Cancel
+            </button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Result: Safe Product - Food Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-dark": "#1a2e22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(844px, 100dvh);
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl bg-[#000000]">
+<div class="absolute top-0 left-0 right-0 z-30 flex items-center justify-between p-4 pt-12">
+<button class="flex items-center justify-center text-white size-10 rounded-full bg-black/20 backdrop-blur-md hover:bg-black/30 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<button class="flex items-center justify-center text-white size-10 rounded-full bg-black/20 backdrop-blur-md hover:bg-black/30 transition-colors">
+<span class="material-symbols-outlined text-2xl">ios_share</span>
+</button>
+</div>
+<div class="flex-1 flex flex-col overflow-y-auto no-scrollbar relative z-10">
+<div class="relative w-full h-80 shrink-0">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABwrG-nH4Pdl7-9XSIt_SmaXR6houPq8nj_FyzhuKpT3f3Cpi_J0cR5Pyc76RbH1-2Z4T10d1PhPR4qIfTa7JS5mZXOPZI-lZzJm8wPBQCzipGWzhTcZYfMLcK89yHIXFOeuHgOsdLct9XwwhGHu75gnZQ7XCW9OIc9Qx7I7sQbQ64MATntDgvDA6WObK1d7Grv1wTtDRBZ52YLIqDiCTjj3Vaep0iyUmkzo_3aKBipWsS9Kc-Ew-Onjc0E6TNySrh6AgfRFbrK2bR");'></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-background-dark"></div>
+</div>
+<div class="flex-1 px-6 -mt-20 pb-32">
+<div class="flex flex-col items-center justify-center mb-6">
+<div class="flex items-center gap-2 bg-primary text-background-dark px-6 py-3 rounded-full shadow-[0_4px_20px_rgba(48,232,110,0.4)] transform hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-2xl font-bold fill-1">check_circle</span>
+<span class="text-lg font-bold tracking-tight">SAFE FOR JAIN</span>
+</div>
+<div class="mt-2 px-3 py-1 rounded-full bg-background-dark/80 backdrop-blur border border-white/10">
+<p class="text-primary text-xs font-bold tracking-wider uppercase">Confidence: 94%</p>
+</div>
+</div>
+<div class="text-center mb-8">
+<h1 class="text-2xl font-bold text-white mb-1 leading-tight">Organic Tomato &amp; Basil Sauce</h1>
+<p class="text-gray-400 text-sm font-medium">Scanned just now</p>
+</div>
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-3 text-primary">
+<span class="material-symbols-outlined text-xl">verified</span>
+<h2 class="text-sm font-bold uppercase tracking-wider">Ingredients (12 detected)</h2>
+</div>
+<div class="bg-surface-dark border border-white/5 rounded-2xl p-5">
+<ul class="space-y-2">
+<li class="flex items-start gap-2.5">
+<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+<span class="text-gray-200 text-sm">Organic Diced Tomatoes</span>
+</li>
+<li class="flex items-start gap-2.5">
+<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+<span class="text-gray-200 text-sm">Fresh Basil Leaves</span>
+</li>
+<li class="flex items-start gap-2.5">
+<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+<span class="text-gray-200 text-sm">Extra Virgin Olive Oil</span>
+</li>
+<li class="flex items-start gap-2.5">
+<div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0"></div>
+<span class="text-gray-200 text-sm">Sea Salt</span>
+</li>
+<li class="pl-4">
+<span class="text-gray-500 text-xs italic">+ 8 more ingredients safe for consumption</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition-all group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">play_arrow</span>
+</div>
+<span class="text-white font-semibold">Show full analysis</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-white">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition-all group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">refresh</span>
+</div>
+<span class="text-white font-semibold">Re-scan Product</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-white">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/5 rounded-xl transition-all group">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">warning</span>
+</div>
+<span class="text-white font-semibold">Report Error</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 group-hover:text-white">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#000000] via-[#000000] to-transparent z-40">
+<button class="w-full h-14 bg-white text-background-dark text-lg font-bold rounded-xl shadow-lg hover:bg-gray-100 transition-colors active:scale-[0.98]">
+            Done
+        </button>
+</div>
+<div class="h-1 bg-black w-full absolute bottom-0"></div>
+</div>
+
+</body></html>

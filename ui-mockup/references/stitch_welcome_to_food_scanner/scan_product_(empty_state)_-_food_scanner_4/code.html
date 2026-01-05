@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Scanner - Scan Product</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-dark": "#1c261f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased selection:bg-primary selection:text-black">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden">
+<!-- Top App Bar -->
+<header class="flex items-center justify-between px-4 py-4 pt-12 pb-4 bg-background-light dark:bg-background-dark z-10 sticky top-0">
+<h1 class="text-2xl font-extrabold tracking-tight leading-tight flex-1">Food Scanner</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors text-gray-900 dark:text-white">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Main Content (Scrollable) -->
+<main class="flex-1 flex flex-col items-center px-6 pb-24 overflow-y-auto w-full max-w-md mx-auto">
+<!-- Hero / Empty State -->
+<div class="flex flex-col items-center justify-center w-full mt-8 mb-8">
+<!-- Illustration Circle -->
+<div class="relative flex items-center justify-center w-40 h-40 mb-8 rounded-full bg-gradient-to-tr from-primary/20 to-primary/5 dark:from-primary/10 dark:to-transparent border border-primary/20">
+<div class="absolute inset-0 rounded-full blur-xl bg-primary/20 dark:bg-primary/10"></div>
+<span class="material-symbols-outlined text-6xl text-primary z-10" style="font-size: 64px;">barcode_scanner</span>
+</div>
+<h2 class="text-2xl font-bold text-center mb-3">Scan a Product</h2>
+<p class="text-center text-gray-600 dark:text-gray-400 text-base leading-relaxed max-w-[280px]">
+                    Point your camera at a barcode to verify ingredients against your dietary needs.
+                </p>
+<!-- Primary Action Button -->
+<button class="mt-8 w-full max-w-[280px] bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 px-6 rounded-2xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+<span class="material-symbols-outlined">photo_camera</span>
+                    Start Scanning
+                </button>
+</div>
+<!-- Tips Section (Guidance Card) -->
+<div class="w-full bg-white dark:bg-surface-dark rounded-2xl p-5 shadow-sm border border-gray-100 dark:border-white/5">
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-4 ml-1">Tips for best results</h3>
+<div class="flex flex-col gap-5">
+<!-- Tip 1 -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">light_mode</span>
+</div>
+<div class="flex flex-col pt-0.5">
+<span class="font-bold text-sm text-gray-900 dark:text-white">Good lighting</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">Ensure the product is well lit to avoid shadows.</span>
+</div>
+</div>
+<!-- Tip 2 -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div class="flex flex-col pt-0.5">
+<span class="font-bold text-sm text-gray-900 dark:text-white">Clear ingredients label</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">Avoid glare on the text and flatten wrinkles.</span>
+</div>
+</div>
+<!-- Tip 3 -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</div>
+<div class="flex flex-col pt-0.5">
+<span class="font-bold text-sm text-gray-900 dark:text-white">Hold camera steady</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">Keep the phone stable for a quick scan.</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-background-light dark:bg-surface-dark border-t border-gray-200 dark:border-white/5 pb-safe pt-2 px-6 z-20 pb-5">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-bold tracking-wide">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary w-16 relative group" href="#">
+<!-- Active Indicator Background -->
+<div class="absolute -top-12 w-14 h-14 bg-primary rounded-full shadow-[0_0_20px_rgba(48,232,110,0.4)] flex items-center justify-center transform translate-y-6">
+<span class="material-symbols-outlined text-background-dark text-3xl">barcode_scanner</span>
+</div>
+<span class="text-[10px] font-bold tracking-wide mt-9">Scan</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors w-16" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold tracking-wide">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

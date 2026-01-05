@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camera Permission Denied</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col justify-between overflow-hidden">
+<!-- Main Content Area - Centered Vertically -->
+<div class="flex flex-1 flex-col items-center justify-center px-6 py-12">
+<div class="flex w-full max-w-[320px] flex-col items-center gap-8">
+<!-- Icon Illustration -->
+<div class="relative flex items-center justify-center">
+<!-- Background blobs for modern feel -->
+<div class="absolute scale-150 rounded-full bg-primary/10 w-32 h-32 blur-xl"></div>
+<div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-white dark:bg-[#1a2e22] shadow-sm border border-[#e8ebe9] dark:border-[#2a4030]">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;">no_photography</span>
+</div>
+<!-- Decorative Badge -->
+<div class="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full bg-red-500 ring-4 ring-background-light dark:ring-background-dark">
+<span class="material-symbols-outlined text-sm text-white font-bold">close</span>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col items-center gap-3 text-center">
+<h1 class="text-2xl font-extrabold leading-tight tracking-tight text-[#111813] dark:text-white">
+                        Camera Access Required
+                    </h1>
+<p class="text-sm font-medium leading-relaxed text-[#63756a] dark:text-[#a0b3a6]">
+                        To scan barcodes and check ingredients against your diet, we need to see what you're eating. Please enable camera access in your settings.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Bottom Action Area -->
+<div class="flex w-full flex-col items-center gap-4 px-6 pb-8 pt-4">
+<button class="flex w-full max-w-[360px] cursor-pointer items-center justify-center gap-2 rounded-xl bg-primary h-12 px-6 text-[#0d3319] text-base font-bold leading-normal tracking-[0.015em] transition-transform active:scale-[0.98] hover:bg-[#25d360]">
+<span>Open Settings</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center rounded-lg px-4 text-[#63756a] dark:text-[#a0b3a6] text-sm font-semibold leading-normal hover:text-[#111813] dark:hover:text-white transition-colors">
+<span class="truncate">Cancel</span>
+</button>
+</div>
+</div>
+</body></html>

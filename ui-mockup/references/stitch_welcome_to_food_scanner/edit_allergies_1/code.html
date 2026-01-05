@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Allergies</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111813] dark:text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-white dark:bg-[#112116] shadow-xl">
+<!-- Header -->
+<div class="flex items-center p-4 pb-2 justify-between bg-white dark:bg-[#112116] sticky top-0 z-10">
+<button class="text-[#111813] dark:text-white flex size-12 shrink-0 items-center justify-start hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+<h2 class="text-[#111813] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Edit Allergies</h2>
+</div>
+<!-- Scrollable Content Area -->
+<div class="flex-1 flex flex-col px-4 pt-2 pb-24 overflow-y-auto">
+<!-- Description -->
+<p class="text-[#637588] dark:text-[#a0b3c6] text-sm font-normal leading-normal pb-6 pt-1">
+                Manage the ingredients you want to avoid. We'll warn you if any scanned food contains them.
+            </p>
+<!-- Active Allergies List -->
+<div class="flex flex-col gap-3">
+<!-- Item 1: Peanuts -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-[#f8faf9] dark:bg-[#1a2e22] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#25382c] shadow-sm text-[#111813] dark:text-white">
+<span class="material-symbols-outlined">sentiment_neutral</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-tight">Peanuts</p>
+<p class="text-[#637588] dark:text-[#a0b3c6] text-xs">High Severity</p>
+</div>
+</div>
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-[#637588] dark:text-[#a0b3c6] hover:bg-[#ffeaea] hover:text-[#e03030] dark:hover:bg-[#3d1a1a] dark:hover:text-[#ff5555] transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+<!-- Item 2: Shellfish -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-[#f8faf9] dark:bg-[#1a2e22] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#25382c] shadow-sm text-[#111813] dark:text-white">
+<span class="material-symbols-outlined">water_full</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-tight">Shellfish</p>
+<p class="text-[#637588] dark:text-[#a0b3c6] text-xs">Medium Severity</p>
+</div>
+</div>
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-[#637588] dark:text-[#a0b3c6] hover:bg-[#ffeaea] hover:text-[#e03030] dark:hover:bg-[#3d1a1a] dark:hover:text-[#ff5555] transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+<!-- Item 3: Dairy -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-[#f8faf9] dark:bg-[#1a2e22] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#25382c] shadow-sm text-[#111813] dark:text-white">
+<span class="material-symbols-outlined">local_drink</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-tight">Dairy</p>
+<p class="text-[#637588] dark:text-[#a0b3c6] text-xs">Low Severity</p>
+</div>
+</div>
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-[#637588] dark:text-[#a0b3c6] hover:bg-[#ffeaea] hover:text-[#e03030] dark:hover:bg-[#3d1a1a] dark:hover:text-[#ff5555] transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+<!-- Item 4: Soy -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-[#f8faf9] dark:bg-[#1a2e22] border border-transparent hover:border-gray-200 dark:hover:border-gray-700 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#25382c] shadow-sm text-[#111813] dark:text-white">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#111813] dark:text-white text-base font-bold leading-tight">Soy</p>
+<p class="text-[#637588] dark:text-[#a0b3c6] text-xs">High Severity</p>
+</div>
+</div>
+<button class="flex h-8 w-8 items-center justify-center rounded-full text-[#637588] dark:text-[#a0b3c6] hover:bg-[#ffeaea] hover:text-[#e03030] dark:hover:bg-[#3d1a1a] dark:hover:text-[#ff5555] transition-colors">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+<!-- Add Button Inline -->
+<button class="flex items-center justify-center w-full p-4 mt-2 rounded-xl border-2 border-dashed border-[#e0e6e3] dark:border-[#2a4032] hover:bg-[#f0f4f2] dark:hover:bg-[#1a2e22] transition-colors group">
+<div class="flex items-center gap-2 text-primary dark:text-primary">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="text-sm font-bold">Add Allergy</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Sticky Footer -->
+<div class="absolute bottom-0 w-full bg-white dark:bg-[#112116] p-4 border-t border-[#f0f4f2] dark:border-[#1e3326] z-20">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-[#28c45d] transition-colors text-[#111813] text-base font-bold leading-normal tracking-[0.015em] shadow-sm">
+<span class="truncate">Save Changes</span>
+</button>
+</div>
+</div>
+</body></html>

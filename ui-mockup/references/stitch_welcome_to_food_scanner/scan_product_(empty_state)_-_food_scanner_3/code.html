@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camera Screen - Photo Review (1 of 1) - Food Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-dark": "#1c261f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black font-display text-white antialiased h-[100dvh] w-full overflow-hidden relative flex flex-col">
+<div class="absolute inset-0 z-0">
+<img alt="Background Context" class="w-full h-full object-cover opacity-30 blur-xl scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkVFd-uFlnMIvqGePdzjmp_6p2p5JsPkJH4Ae86a6YIFNGe2Yd8sckXVqL8uYfPcw5EkJo440XWAKfS2t4vnT6WQ2OAgCNwfcwPGGtkbsB4zMhO57lGYMk130OJ5IaYNt6Y6G4VMO08saK5dUlaEObGLH-C2NBBB-9DZO6cECuz7G77EwSSVvGoeQggZoYztdfw5Ott3epbyXk9zeTNTo62TtO7igrxUkEvkAQ4YbuUlxAb-qGyEhsNAZCsS2MDmOX3jzoMGpX08OL"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/90"></div>
+</div>
+<header class="relative z-20 flex justify-between items-center px-6 pt-14 pb-4">
+<button class="group flex items-center justify-center w-11 h-11 rounded-full bg-black/25 backdrop-blur-md border border-white/10 hover:bg-white/20 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-white text-[24px]">arrow_back</span>
+</button>
+<button class="group flex items-center justify-center w-11 h-11 rounded-full bg-black/25 backdrop-blur-md border border-white/10 hover:bg-white/20 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-white text-[24px]">check</span>
+</button>
+</header>
+<main class="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pb-4">
+<div class="relative w-full max-w-xs aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20">
+<img alt="Captured Photo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkVFd-uFlnMIvqGePdzjmp_6p2p5JsPkJH4Ae86a6YIFNGe2Yd8sckXVqL8uYfPcw5EkJo440XWAKfS2t4vnT6WQ2OAgCNwfcwPGGtkbsB4zMhO57lGYMk130OJ5IaYNt6Y6G4VMO08saK5dUlaEObGLH-C2NBBB-9DZO6cECuz7G77EwSSVvGoeQggZoYztdfw5Ott3epbyXk9zeTNTo62TtO7igrxUkEvkAQ4YbuUlxAb-qGyEhsNAZCsS2MDmOX3jzoMGpX08OL"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-black/10 pointer-events-none rounded-3xl"></div>
+</div>
+<div class="mt-6 flex items-center justify-center">
+<div class="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10">
+<p class="text-white/90 text-sm font-semibold tracking-wide">Photo 1 of 1</p>
+</div>
+</div>
+</main>
+<footer class="relative z-20 flex flex-col gap-3 px-6 pb-10 pt-4 bg-gradient-to-t from-black via-black/80 to-transparent">
+<button class="w-full h-14 rounded-2xl bg-primary hover:bg-green-400 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2.5 shadow-lg shadow-green-900/20">
+<span class="material-symbols-outlined text-black font-bold text-[24px]">check</span>
+<span class="text-black font-extrabold text-lg tracking-tight">Start Scanning</span>
+</button>
+<button class="w-full h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2.5">
+<span class="material-symbols-outlined text-white text-[22px]">add_a_photo</span>
+<span class="text-white font-bold text-lg tracking-tight">Add Another Photo</span>
+</button>
+<button class="w-full h-10 mt-1 rounded-xl flex items-center justify-center gap-2 text-white/60 hover:text-white active:scale-95 transition-colors duration-200">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+<span class="font-semibold text-sm tracking-wide">Retake This Photo</span>
+</button>
+</footer>
+
+</body></html>

@@ -1,4 +1,5 @@
 # PRD 03: USER EXPERIENCE & FLOWS
+
 ## Food Dietary Compliance Analyzer
 
 **Document Version:** 1.0  
@@ -12,9 +13,11 @@
 ### 1. AUTHENTICATION SCREENS
 
 #### Screen: Login
+
 **Route:** `/auth/login`
 
 **Layout:**
+
 ```
 ┌─────────────────────────────────────┐
 │                                     │
@@ -26,36 +29,97 @@
 │                                     │
 │   Password                          │
 │   [________________]  👁️            │
-│                                     │
+│               Forgot Password?      │
 │   ┌───────────────────────────┐    │
 │   │   Sign In                 │    │
 │   └───────────────────────────┘    │
-│                                     │
+│                                    │
 │   ──────── or continue with ────   │
 │                                     │
 │   ┌───────────────────────────┐    │
 │   │  🔵 Continue with Google  │    │
 │   └───────────────────────────┘    │
 │                                     │
-│   Forgot Password? | Sign Up        │
+   Don't have an account? Sign Up                          │
 │                                     │
 └─────────────────────────────────────┘
 ```
 
 **User Actions:**
+
 - Enter email + password → Sign in
 - Tap Google → OAuth flow
 - Tap "Forgot Password" → Password reset flow
 - Tap "Sign Up" → Sign up screen
 
 **Validation:**
+
 - Email: Valid format
 - Password: Min 8 characters
 - Error: "Invalid email or password"
 
 ---
 
+#### Screen: Sign Up
+
+**Route:** `/auth/signup`
+
+**Layout:**
+
+```
+┌─────────────────────────────────────┐
+│                                     │
+│         🥫 Food Scanner             │
+│         Create Account              │
+│                                     │
+│   Full Name                         │
+│   [________________]                │
+│                                     │
+│   Email                             │
+│   [________________]                │
+│                                     │
+│   Password                          │
+│   [________________]  👁️            │
+│                                     │
+│   Confirm Password                  │
+│   [________________]  👁️            │
+│                                     │
+│   ┌───────────────────────────┐    │
+│   │   Create Account          │    │
+│   └───────────────────────────┘    │
+│                                     │
+│   ──────── or sign up with ─────   │
+│                                     │
+│   ┌───────────────────────────┐    │
+│   │  🔵 Sign up with Google   │    │
+│   └───────────────────────────┘    │
+│                                     │
+│   Already have an account? Login    │
+│                                     │
+│   By joining, you agree to our      │
+│   Terms & Privacy Policy            │
+│                                     │
+└─────────────────────────────────────┘
+```
+
+**User Actions:**
+
+- Enter Name, Email, Password, Confirm → Create Account
+- Tap Google → OAuth flow
+- Tap "Login" → Login screen
+- Tap "Terms" or "Privacy" → Webview
+
+**Validation:**
+
+- Name: Required
+- Email: Valid format, not already registered
+- Password: Min 8 chars, 1 number, 1 special char
+- Confirm Password: Must match
+
+---
+
 ### 2. ONBOARDING SCREENS (10 Total)
+
 Visual Progress Bar:
 
 Screen 1 (Welcome): 0% complete
@@ -65,6 +129,7 @@ Screen 8 (Allergies): 95%
 Screen 9 (Summary): 100%
 
 #### Screen 1: Welcome
+
 ```
 ┌─────────────────────────────────────┐
 │                                     │  ← Progress bar 
@@ -91,6 +156,7 @@ Screen 9 (Summary): 100%
 ```
 
 #### Screen 2: Community Selection
+
 ```
 ┌─────────────────────────────────────┐
 │  ━━━                                │  ← Progress bar 
@@ -126,6 +192,7 @@ Screen 9 (Summary): 100%
 ```
 
 **User Actions:**
+
 - Must select one community
 - "Next" button disabled until selection
 - Selection highlighted with border + checkmark
@@ -133,6 +200,7 @@ Screen 9 (Summary): 100%
 #### Screens 3-7: Restrictions by Category (5 Screens)
 
 **Screen 3: Proteins & Meat**
+
 ```
 ┌─────────────────────────────────────┐
 │  ━━━━━━━━━                          │  ← Progress bar 
@@ -154,6 +222,7 @@ Screen 9 (Summary): 100%
 ```
 
 **Features:**
+
 - Search box filters items in real-time
 - Tap checkbox to toggle
 - Defaults pre-checked based on community
@@ -165,6 +234,7 @@ Screen 9 (Summary): 100%
 **Screen 7:** Other Items (4 items)
 
 #### Screen 8: Allergies
+
 ```
 ┌─────────────────────────────────────┐
 │  ━━━━━━━━━━━━━━━━━━                 │  ← Progress bar 
@@ -191,6 +261,7 @@ Screen 9 (Summary): 100%
 ```
 
 #### Screen 9: Summary
+
 ```
 ┌─────────────────────────────────────┐
 │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━        │  ← Progress bar 
@@ -226,6 +297,7 @@ Screen 9 (Summary): 100%
 #### Tab 1: Scan/Home Screen
 
 **Empty State (First Time):**
+
 ```
 ┌─────────────────────────────────────┐
 │  Food Scanner          ⚙️            │
@@ -251,6 +323,7 @@ Screen 9 (Summary): 100%
 ```
 
 #### History Screen
+
 ```
 ┌─────────────────────────────────────┐
 │  Food Scanner          ⚙️            │
@@ -385,6 +458,7 @@ Step 5: User taps "Start Scanning"
 ```
 
 **Features:**
+
 - Framing guide (rectangle overlay)
 - Flash toggle (💡)
 - Multi-photo support (up to 3)
@@ -392,6 +466,7 @@ Step 5: User taps "Start Scanning"
 - "Next" appears after 1st photo
 
 #### Processing Screen
+
 ```
 ┌─────────────────────────────────────┐
 │                                     │
@@ -406,6 +481,7 @@ Step 5: User taps "Start Scanning"
 │   plant-based depending on region   │
 └─────────────────────────────────────┘
 ```
+
 // Constant array stored in app
 const DID_YOU_KNOW_TIPS = [
   "E471 can be plant-based or animal-derived depending on the region.",
@@ -438,6 +514,7 @@ function getRandomTip(): string {
 </ProcessingScreen>
 
 **States:**
+
 1. "Compressing images..." (10%)
 2. "Uploading..." (20%)
 3. "Extracting ingredients..." (40%)
@@ -446,6 +523,7 @@ function getRandomTip(): string {
 6. "Finalizing results..." (95%)
 
 #### Result Screen - SAFE
+
 ```
 ┌─────────────────────────────────────┐
 │  ← Back                    Share    │
@@ -478,6 +556,7 @@ function getRandomTip(): string {
 ```
 
 #### Result Screen - UNSAFE
+
 ```
 ┌─────────────────────────────────────┐
 │  ← Back                              │
@@ -509,6 +588,7 @@ function getRandomTip(): string {
 ```
 
 #### Result Screen - UNCERTAIN
+
 ```
 ┌─────────────────────────────────────┐
 │  ← Back                              │
@@ -574,12 +654,14 @@ function getRandomTip(): string {
 ```
 
 **Features:**
+
 - Swipe left on item → Delete
 - Tap item → Detail view
 - Search bar (🔍)
 - Filter menu (⋮)
 
 **Filter Options:**
+
 ```
 ┌─────────────────────────────────────┐
 │  Filter Scans                       │
@@ -685,6 +767,7 @@ function getRandomTip(): string {
 ```
 
 **Drop-off Points to Monitor:**
+
 - Onboarding Screen 3 (30% expected)
 - Camera permissions (10% expected)
 - First scan completion (5% expected)
@@ -778,6 +861,7 @@ function getRandomTip(): string {
 ## COMPLETE USER FLOW: FIRST SCAN
 
 ### Flow Diagram
+
 User opens app (first time)
 ↓
 Onboarding (10 screens with progress bar)
@@ -865,11 +949,13 @@ Now shows: Recent scan in list
 ### Navigation
 
 **Tab Bar (Bottom):**
+
 - History (left)
 - Scan (center, primary)
 - Profile (right)
 
 **Gesture Controls:**
+
 - Swipe left on history item → Delete
 - Pull to refresh → Refresh history
 - Tap outside modal → Dismiss
@@ -877,16 +963,19 @@ Now shows: Recent scan in list
 ### Loading States
 
 **Skeleton Screens:**
+
 - History loading → Show 3 gray rectangles
 - Profile loading → Show gray circles + lines
 
 **Progress Indicators:**
+
 - Scan processing → Progress bar + tips
 - Image upload → Spinner
 
 ### Error States
 
 **Network Error:**
+
 ```
 ┌─────────────────────────────────────┐
 │   ❌ No Internet Connection         │
@@ -899,6 +988,7 @@ Now shows: Recent scan in list
 ```
 
 **Camera Permission Denied:**
+
 ```
 ┌─────────────────────────────────────┐
 │   📷 Camera Access Required         │

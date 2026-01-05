@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camera Screen - Capture Photo</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#30e86e",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112116",
+                        "surface-dark": "#1c261f",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>.scan-viewfinder {
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black font-display text-white antialiased h-[100dvh] w-full overflow-hidden relative">
+<div class="absolute inset-0 z-0">
+<img alt="Camera View" class="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkVFd-uFlnMIvqGePdzjmp_6p2p5JsPkJH4Ae86a6YIFNGe2Yd8sckXVqL8uYfPcw5EkJo440XWAKfS2t4vnT6WQ2OAgCNwfcwPGGtkbsB4zMhO57lGYMk130OJ5IaYNt6Y6G4VMO08saK5dUlaEObGLH-C2NBBB-9DZO6cECuz7G77EwSSVvGoeQggZoYztdfw5Ott3epbyXk9zeTNTo62TtO7igrxUkEvkAQ4YbuUlxAb-qGyEhsNAZCsS2MDmOX3jzoMGpX08OL"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<header class="absolute top-0 left-0 right-0 z-20 flex justify-between items-center px-6 pt-14 pb-4 bg-gradient-to-b from-black/70 to-transparent">
+<button class="group flex items-center justify-center w-11 h-11 rounded-full bg-black/25 backdrop-blur-md border border-white/10 hover:bg-white/20 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-white text-[28px]">close</span>
+</button>
+<button class="group flex items-center justify-center w-11 h-11 rounded-full bg-black/25 backdrop-blur-md border border-white/10 hover:bg-white/20 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-white text-[24px] fill-1">flash_on</span>
+</button>
+</header>
+<main class="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
+<div class="relative w-72 h-80 rounded-3xl border border-white/30 scan-viewfinder">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-2xl -mt-[2px] -ml-[2px]"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-primary rounded-tr-2xl -mt-[2px] -mr-[2px]"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-primary rounded-bl-2xl -mb-[2px] -ml-[2px]"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-primary rounded-br-2xl -mb-[2px] -mr-[2px]"></div>
+<div class="absolute inset-0 m-auto w-1.5 h-1.5 bg-primary/80 rounded-full"></div>
+</div>
+<p class="mt-8 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md text-sm font-medium text-white/90 tracking-wide border border-white/5">
+        Align food label within frame
+    </p>
+</main>
+<footer class="absolute bottom-0 left-0 right-0 z-20 flex flex-col items-center justify-end pb-12 pt-32 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+<button class="relative group w-[84px] h-[84px] rounded-full border-[6px] border-white/90 flex items-center justify-center shadow-lg shadow-black/20 active:scale-95 transition-transform duration-150 ease-out">
+<div class="w-[66px] h-[66px] bg-white rounded-full transition-all duration-200 group-active:scale-90 shadow-inner"></div>
+</button>
+<div class="mt-6 text-center">
+<p class="text-white/80 text-sm font-semibold tracking-wide font-display">No photos yet</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      @layer utilities {
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+          font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-50 text-gray-900 font-[Manrope] antialiased">
+<div class="flex min-h-screen flex-col justify-between mx-auto max-w-md bg-white shadow-xl shadow-gray-100 overflow-hidden relative">
+<div class="flex-1 p-6">
+<div class="mb-8">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-emerald-600 tracking-wider uppercase">Step 1 of 4</span>
+<span class="text-xs font-medium text-gray-400">10%</span>
+</div>
+<div class="h-1.5 w-full rounded-full bg-gray-100 overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 10%;"></div>
+</div>
+</div>
+<div class="mb-8">
+<h1 class="text-2xl font-bold text-gray-900 mb-2">Select Your Dietary Path</h1>
+<p class="text-gray-500 text-sm leading-relaxed">
+            Choose the community guidelines you follow to customize your food scanning experience.
+          </p>
+</div>
+<div class="flex flex-col gap-4">
+<label class="relative group cursor-pointer">
+<input checked="" class="peer sr-only" name="dietary_path" type="radio"/>
+<div class="flex items-start gap-4 p-4 rounded-2xl border border-gray-200 bg-white transition-all duration-200 hover:border-emerald-200 peer-checked:border-emerald-500 peer-checked:bg-emerald-50 peer-checked:ring-1 peer-checked:ring-emerald-500">
+<div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gray-50 text-gray-500 transition-colors peer-checked:bg-emerald-500 peer-checked:text-white">
+<span class="material-symbols-outlined text-[28px]">spa</span>
+</div>
+<div class="flex-grow pt-0.5">
+<div class="flex justify-between items-start">
+<h3 class="text-base font-bold text-gray-900 peer-checked:text-emerald-900">Jain</h3>
+<span class="material-symbols-outlined filled text-emerald-600 text-[20px] opacity-0 -translate-y-1 transition-all duration-200 peer-checked:opacity-100 peer-checked:translate-y-0">check_circle</span>
+</div>
+<p class="text-sm text-gray-500 mt-1 leading-snug peer-checked:text-emerald-800/80">
+                  Follows strict vegetarianism, avoiding root vegetables and certain other foods.
+                </p>
+</div>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="dietary_path" type="radio"/>
+<div class="flex items-start gap-4 p-4 rounded-2xl border border-gray-200 bg-white transition-all duration-200 hover:border-emerald-200 peer-checked:border-emerald-500 peer-checked:bg-emerald-50 peer-checked:ring-1 peer-checked:ring-emerald-500">
+<div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gray-50 text-gray-500 transition-colors peer-checked:bg-emerald-500 peer-checked:text-white">
+<span class="material-symbols-outlined text-[28px]">local_florist</span>
+</div>
+<div class="flex-grow pt-0.5">
+<div class="flex justify-between items-start">
+<h3 class="text-base font-bold text-gray-900 peer-checked:text-emerald-900">Vaishnava</h3>
+<span class="material-symbols-outlined filled text-emerald-600 text-[20px] opacity-0 -translate-y-1 transition-all duration-200 peer-checked:opacity-100 peer-checked:translate-y-0">check_circle</span>
+</div>
+<p class="text-sm text-gray-500 mt-1 leading-snug peer-checked:text-emerald-800/80">
+                  Emphasizes vegetarianism, often excluding garlic, onions, and certain spices.
+                </p>
+</div>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="dietary_path" type="radio"/>
+<div class="flex items-start gap-4 p-4 rounded-2xl border border-gray-200 bg-white transition-all duration-200 hover:border-emerald-200 peer-checked:border-emerald-500 peer-checked:bg-emerald-50 peer-checked:ring-1 peer-checked:ring-emerald-500">
+<div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gray-50 text-gray-500 transition-colors peer-checked:bg-emerald-500 peer-checked:text-white">
+<span class="material-symbols-outlined text-[28px]">brightness_high</span>
+</div>
+<div class="flex-grow pt-0.5">
+<div class="flex justify-between items-start">
+<h3 class="text-base font-bold text-gray-900 peer-checked:text-emerald-900">Swaminarayan</h3>
+<span class="material-symbols-outlined filled text-emerald-600 text-[20px] opacity-0 -translate-y-1 transition-all duration-200 peer-checked:opacity-100 peer-checked:translate-y-0">check_circle</span>
+</div>
+<p class="text-sm text-gray-500 mt-1 leading-snug peer-checked:text-emerald-800/80">
+                  Adheres to a lacto-vegetarian diet, avoiding meat, eggs, and sometimes certain vegetables.
+                </p>
+</div>
+</div>
+</label>
+<label class="relative group cursor-pointer">
+<input class="peer sr-only" name="dietary_path" type="radio"/>
+<div class="flex items-start gap-4 p-4 rounded-2xl border border-gray-200 bg-white transition-all duration-200 hover:border-emerald-200 peer-checked:border-emerald-500 peer-checked:bg-emerald-50 peer-checked:ring-1 peer-checked:ring-emerald-500">
+<div class="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-xl bg-gray-50 text-gray-500 transition-colors peer-checked:bg-emerald-500 peer-checked:text-white">
+<span class="material-symbols-outlined text-[28px]">cruelty_free</span>
+</div>
+<div class="flex-grow pt-0.5">
+<div class="flex justify-between items-start">
+<h3 class="text-base font-bold text-gray-900 peer-checked:text-emerald-900">Vegan</h3>
+<span class="material-symbols-outlined filled text-emerald-600 text-[20px] opacity-0 -translate-y-1 transition-all duration-200 peer-checked:opacity-100 peer-checked:translate-y-0">check_circle</span>
+</div>
+<p class="text-sm text-gray-500 mt-1 leading-snug peer-checked:text-emerald-800/80">
+                  Excludes all animal products, including meat, dairy, eggs, and honey.
+                </p>
+</div>
+</div>
+</label>
+</div>
+</div>
+<div class="p-6 bg-white border-t border-gray-50 sticky bottom-0 z-10">
+<button class="w-full h-14 rounded-2xl bg-emerald-600 text-white text-lg font-bold tracking-wide shadow-lg shadow-emerald-200 hover:bg-emerald-700 hover:shadow-emerald-300 transition-all duration-200 flex items-center justify-center gap-2 group">
+          Next
+          <span class="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+
+</body></html>
